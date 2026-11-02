@@ -1,0 +1,2114 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>MindGrid Project Report - Nitin Kumar</title><style>@page { size: A4; }
+* { box-sizing: border-box; }
+body { font-family: "Times New Roman", serif; font-size: 12pt; color: #17211c; margin: 0; }
+p { margin: 0 0 7pt 0; text-align: justify; line-height: 1.3; }
+h1 { font-size: 14pt; font-weight: bold; text-align: center; text-transform: uppercase; margin: 6pt 0 12pt 0; line-height: 1.16; }
+h2 { font-size: 13pt; font-weight: bold; text-align: left; margin: 10pt 0 5pt 0; line-height: 1.16; }
+h3 { font-size: 12pt; font-weight: bold; text-align: left; margin: 8pt 0 4pt 0; }
+.cover { text-align: center; line-height: 1.22; }
+.left { text-align: left; }
+.bold { font-weight: bold; }
+.center { text-align: center; }
+.caption { font-size: 10pt; font-style: italic; text-align: center; margin: 1pt 0 10pt 0; line-height: 1.3; }
+.formula { font-size: 11.5pt; font-style: italic; text-align: center; margin: 5pt 0 7pt 0; line-height: 1.3; }
+.muted { color: #60716b; }
+ul.bullets { margin: 0 0 6pt 0; padding: 0; list-style: none; }
+ul.bullets li { margin: 0 0 4pt 0; padding-left: 24pt; text-indent: -17pt; text-align: justify; line-height: 1.3; }
+ol.steps { margin: 0 0 6pt 0; padding: 0; list-style: none; counter-reset: st; }
+ol.steps li { margin: 0 0 4pt 0; padding-left: 27pt; text-indent: -18pt; text-align: justify; line-height: 1.3; }
+pre.code { font-family: Consolas, monospace; font-size: 9.5pt; background: #f0f4ef; border: 0.5pt solid #b0beb4;
+           padding: 6pt 7pt; margin: 0 0 8pt 0; line-height: 1.2; white-space: pre-wrap; }
+table { border-collapse: collapse; table-layout: fixed; margin: 0 0 1pt 0; }
+th, td { border: 0.5pt solid #b0beb4; padding: 3.5pt 5pt; text-align: left; vertical-align: middle;
+         font-size: 10.5pt; line-height: 1.22; margin: 0; }
+th { background: #17211c; color: #ffffff; font-weight: bold; }
+thead { display: table-header-group; }
+tr.alt td { background: #f6f8f5; }
+td.c12 { font-size: 12pt; line-height: 1.3; }
+td.pageno { text-align: center; font-weight: bold; }
+.fig { text-align: center; margin: 0 0 2pt 0; }
+.fig img { display: block; margin: 0 auto; }
+.imagetable td { vertical-align: top; text-align: center; }
+.imagetable img { display: block; margin: 0 auto; }
+.imagetable .lab { font-size: 10pt; font-weight: bold; text-align: center; margin: 2pt 0 0 0; line-height: 1.2; }
+.imagetable .note { font-size: 9pt; font-style: italic; color: #60716b; text-align: center; margin: 0 0 4pt 0; line-height: 1.2; text-align: center; }
+table.sig { border: none; margin: 0 0 8pt 0; }
+table.sig td { border: none; background: none !important; padding: 2pt 0; text-align: left; font-size: 12pt; }
+table.sig td.role { font-weight: bold; font-size: 11pt; }
+div.box { border: 0.5pt solid #b0beb4; text-align: center; font-style: italic; color: #60716b; font-size: 10.5pt;
+          padding: 8pt; margin: 0 0 8pt 0; }
+.pb { break-before: page; page-break-before: always; }
+img { max-width: 100%; }</style></head><body>
+<p style="font-size:20pt;font-weight:bold;margin-bottom:26pt;">PROJECT REPORT ON</p>
+<p style="font-size:15pt;font-weight:bold;margin-bottom:4pt;">“MINDGRID: AN INTERACTIVE PUZZLE ARCADE,</p>
+<p style="font-size:15pt;font-weight:bold;margin-bottom:4pt;">APTITUDE MODULE AND ALGORITHM BENCHMARK</p>
+<p style="font-size:15pt;font-weight:bold;margin-bottom:40pt;">WEB APPLICATION”</p>
+<p style="font-size:12.5pt;margin-bottom:3pt;">Submitted By:</p>
+<p style="font-size:12.5pt;font-weight:bold;margin-bottom:34pt;">Nitin Kumar | UID: 26MCA20235</p>
+<p style="font-size:12.5pt;margin-bottom:3pt;">Under the Guidance of:</p>
+<p style="font-size:12.5pt;margin-bottom:34pt;">Mr. Payal Sharma</p>
+<p style="font-size:12.5pt;font-weight:bold;margin-bottom:3pt;">University Institute of Computing</p>
+<p style="font-size:12.5pt;font-weight:bold;margin-bottom:3pt;">Chandigarh University</p>
+<p style="font-size:12.5pt;font-weight:bold;margin-bottom:3pt;">Mohali, Punjab</p>
+<p style="font-size:12.5pt;margin-bottom:0pt;">November 2026</p>
+<h1>CERTIFICATE</h1>
+<p>This is to certify that Nitin Kumar (UID: 26MCA20235), a student of the Master of Computer Applications (MCA) programme, has successfully completed the project entitled “MindGrid: An Interactive Puzzle Arcade, Aptitude Module and Algorithm Benchmark Web Application” under my supervision.</p>
+<p>The work presented in this report is a record of genuine project work carried out by the student. It has not been submitted, in whole or in part, to any other university or institution for the award of a degree or diploma. The report documents the requirements, design, implementation, testing and evaluation of the submitted source code.</p>
+<div style="height:60pt"></div>
+<p>Date: ____________________</p>
+<p>Place: Chandigarh University, Mohali, Punjab</p>
+<div style="height:70pt"></div>
+<table style="width:100%"><tr><td style="width:50%">________________________</td><td style="width:50%">________________________</td></tr><tr><td class="role">Head of the Department</td><td class="role">Project Guide / Supervisor</td></tr></table>
+<h1>ACKNOWLEDGEMENT</h1>
+<p>I express my sincere gratitude to my project guide for the continuous guidance, constructive feedback and encouragement received throughout the development of MindGrid. The regular reviews helped shape the scope of the project and kept the implementation focused on clear, verifiable behaviour rather than on unnecessary features.</p>
+<p>I am thankful to the faculty members of the University Institute of Computing, Chandigarh University, for providing the academic environment, laboratory facilities and the foundational coursework in programming, data structures and algorithm design on which this project draws.</p>
+<p>I would also like to thank my family and classmates for their patience and support, and for testing the arcade during its development. Their feedback on the interface, the difficulty levels and the solver controls contributed directly to the final build.</p>
+<div style="height:40pt"></div>
+<p>Nitin Kumar | UID: 26MCA20235</p>
+<p>Date: November 2026</p>
+<h1>ABSTRACT</h1>
+<p>MindGrid is an interactive puzzle arcade and aptitude-practice application that brings four classic problem-solving games together behind one interface, pairs each of them with an algorithmic solver, and reports measured search performance in a built-in benchmark dashboard. The primary build is a responsive front-end web application written in semantic HTML, CSS and plain JavaScript; a companion C++17 console program implements the same four modules with the same algorithms and a locally stored player profile.</p>
+<p>The four modules exercise three recognised aptitude areas. Sudoku and the N-Queens Tour develop logical reasoning and constraint deduction: the player works with candidate sets, elimination and placement rules, and the application demonstrates the same reasoning mechanically through bit-mask backtracking. Connect Four and 2048 develop quantitative reasoning: the player evaluates line threats, merges powers of two and reasons about scores, while the application demonstrates game-tree search with alpha-beta pruning and a weighted heuristic evaluation. The benchmark dashboard develops data interpretation: it presents elapsed time, node counts, pruning cut-offs and solution counts that must be read and compared rather than taken as a single number.</p>
+<p>The distinguishing characteristic of the project is its local-first design. The browser build has no framework, no build step, no package installation and no server; progress is stored in localStorage under a single key. The console build stores the same summary in a plain text profile file. Every solver runs on the user's own device, and every measurement is reported as an observation of that run rather than as a fixed performance claim.</p>
+<p>This report documents the project background, problem statement, objectives, methodology, architecture, module design, algorithm analysis with worked examples, the dedicated Image Table of structured matrices, user interface evidence, data design, comparison tables, gap analysis, evaluation criteria, limitations and conclusion. All numeric results quoted in the report were obtained from the submitted source and from actual runs of that source on the development machine.</p>
+<p>Keywords: puzzle arcade, aptitude practice, logical reasoning, quantitative aptitude, data interpretation, JavaScript, C++17, backtracking, bit masks, minimax, alpha-beta pruning, heuristic evaluation, benchmark dashboard, localStorage</p>
+<h1>TABLE OF CONTENTS</h1>
+<table style="width:425pt;table-layout:fixed"><colgroup><col style="width:84%"><col style="width:16%"></colgroup><thead><tr><th>Section</th><th style="text-align:center">Page</th></tr></thead><tbody>
+<tr><td class="c12">Certificate</td><td class="c12 pageno">2</td></tr>
+<tr><td class="c12">Acknowledgement</td><td class="c12 pageno">3</td></tr>
+<tr><td class="c12">Abstract</td><td class="c12 pageno">4</td></tr>
+<tr><td class="c12">1. Project Title and Basic Information</td><td class="c12 pageno">7</td></tr>
+<tr><td class="c12">2. Executive Summary and Problem Statement</td><td class="c12 pageno">10</td></tr>
+<tr><td class="c12">3. Case Study Description and Methodology</td><td class="c12 pageno">12</td></tr>
+<tr><td class="c12">4. System Architecture and Workflow</td><td class="c12 pageno">15</td></tr>
+<tr><td class="c12">5. Implementation and Functional (Aptitude) Modules</td><td class="c12 pageno">18</td></tr>
+<tr><td class="c12">6. User Interface and Project Evidence</td><td class="c12 pageno">26</td></tr>
+<tr><td class="c12">7. Image Table: Structured Data and Problem-Solving Matrices</td><td class="c12 pageno">35</td></tr>
+<tr><td class="c12">8. Local Data Design and Data Management</td><td class="c12 pageno">41</td></tr>
+<tr><td class="c12">9. Side-by-Side Comparison Tables</td><td class="c12 pageno">43</td></tr>
+<tr><td class="c12">10. Research / Project Gap Analysis</td><td class="c12 pageno">46</td></tr>
+<tr><td class="c12">11. Expected Outcomes and Evaluation Criteria</td><td class="c12 pageno">47</td></tr>
+<tr><td class="c12">12. Limitations and Conclusion</td><td class="c12 pageno">49</td></tr>
+<tr><td class="c12">13. References and Appendices</td><td class="c12 pageno">51</td></tr>
+<tr><td class="c12">14. GitHub Proof</td><td class="c12 pageno">53</td></tr>
+</tbody></table>
+<h2>List of Tables and Figures</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:15.66%">
+<col style="width:56.63%">
+<col style="width:27.71%">
+</colgroup>
+<thead><tr>
+<th>Ref.</th>
+<th>Content</th>
+<th>Section</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Table 1.1</td>
+<td>Basic project information</td>
+<td>1.2</td>
+</tr>
+<tr class="alt">
+<td>Table 1.2</td>
+<td>Aptitude area to MindGrid module mapping</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>Table 3.1</td>
+<td>Automated engine test inventory</td>
+<td>3.4</td>
+</tr>
+<tr class="alt">
+<td>Table 4.1</td>
+<td>Architecture layers and responsibilities</td>
+<td>4.1</td>
+</tr>
+<tr>
+<td>Table 4.2</td>
+<td>Project file inventory</td>
+<td>4.4</td>
+</tr>
+<tr class="alt">
+<td>Table 5.1</td>
+<td>Module summary: state, algorithm, controls</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>Table 5.2</td>
+<td>Sudoku difficulty configuration</td>
+<td>5.2</td>
+</tr>
+<tr class="alt">
+<td>Table 5.3</td>
+<td>Connect Four evaluation weights (both builds)</td>
+<td>5.3</td>
+</tr>
+<tr>
+<td>Table 5.4</td>
+<td>N-Queens search space reduction</td>
+<td>5.4</td>
+</tr>
+<tr class="alt">
+<td>Table 5.5</td>
+<td>2048 heuristic feature weights</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>Table 5.6</td>
+<td>Consolidated formula reference</td>
+<td>5.7</td>
+</tr>
+<tr class="alt">
+<td>Table 7.1</td>
+<td>Module, aptitude and metric matrix</td>
+<td>7.2</td>
+</tr>
+<tr>
+<td>Table 7.2</td>
+<td>Sudoku step-by-step deduction matrix</td>
+<td>7.3</td>
+</tr>
+<tr class="alt">
+<td>Table 7.3</td>
+<td>Connect Four window evaluation matrix</td>
+<td>7.4</td>
+</tr>
+<tr>
+<td>Table 7.4</td>
+<td>N-Queens counting matrix</td>
+<td>7.5</td>
+</tr>
+<tr class="alt">
+<td>Table 7.5</td>
+<td>2048 merge and score arithmetic matrix</td>
+<td>7.6</td>
+</tr>
+<tr>
+<td>Table 7.6</td>
+<td>Observed benchmark reading matrix</td>
+<td>7.7</td>
+</tr>
+<tr class="alt">
+<td>Table 7.7</td>
+<td>Visual summary image table</td>
+<td>7.8</td>
+</tr>
+<tr>
+<td>Table 8.1</td>
+<td>Persistence keys and fields</td>
+<td>8.2</td>
+</tr>
+<tr class="alt">
+<td>Table 9.1</td>
+<td>Feature comparison</td>
+<td>9.1</td>
+</tr>
+<tr>
+<td>Table 9.2</td>
+<td>Browser build versus console build</td>
+<td>9.2</td>
+</tr>
+<tr class="alt">
+<td>Table 10.1</td>
+<td>Gap analysis</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Table 11.1</td>
+<td>Expected outcomes and evaluation criteria</td>
+<td>11</td>
+</tr>
+<tr class="alt">
+<td>Figure 4.1</td>
+<td>MindGrid overview screen</td>
+<td>4.1</td>
+</tr>
+<tr>
+<td>Figure 6.1</td>
+<td>Overview and navigation shell</td>
+<td>6.1</td>
+</tr>
+<tr class="alt">
+<td>Figure 6.2</td>
+<td>Sudoku module in play</td>
+<td>6.2</td>
+</tr>
+<tr>
+<td>Figure 6.3</td>
+<td>Connect Four against the alpha-beta agent</td>
+<td>6.3</td>
+</tr>
+<tr class="alt">
+<td>Figure 6.4</td>
+<td>N-Queens solved and counted</td>
+<td>6.4</td>
+</tr>
+<tr>
+<td>Figure 6.5</td>
+<td>2048 mid-game board</td>
+<td>6.5</td>
+</tr>
+<tr class="alt">
+<td>Figure 6.6</td>
+<td>Benchmark dashboard after a full run</td>
+<td>6.6</td>
+</tr>
+<tr>
+<td>Figure 6.7</td>
+<td>C++17 console benchmark suite output</td>
+<td>6.7</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 0.1: Numbered tables and figures used in this report.</p>
+<h1>1. PROJECT TITLE AND BASIC INFORMATION</h1>
+<h2>Project Overview</h2>
+<p>Project title: MindGrid: An Interactive Puzzle Arcade, Aptitude Module and Algorithm Benchmark Web Application.</p>
+<p>MindGrid is a browser-based arcade and practice environment for four puzzle problems that are regularly used to develop and examine aptitude: Sudoku for constraint deduction, the N-Queens Tour for combinatorial placement reasoning, Connect Four for lookahead and evaluation reasoning, and 2048 for numeric merging under spatial constraints. Each module offers an interactive play mode, validation of every move against the rules of the game, a solver or a move suggestion, and a measured report of how much search work the solver performed. A shared navigation shell connects the modules, a locally stored profile summarises progress, and a benchmark screen runs all four solvers and presents their timings side by side.</p>
+<p>The project is delivered as two implementations of the same idea. The first is a static front-end application in the web/ directory, written without a framework, a build step or a package manager. The second is a single-translation-unit C++17 console program in main.cpp that reproduces the four games, the four algorithms and the profile summary in a terminal. Both builds are self-contained and run locally.</p>
+<h2>Basic Project Information</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:25.3%">
+<col style="width:74.7%">
+</colgroup>
+<thead><tr>
+<th>Item</th>
+<th>Details</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Project category</td>
+<td>Front-end web application with an aptitude-practice focus and an algorithm demonstration layer</td>
+</tr>
+<tr class="alt">
+<td>Frontend</td>
+<td>HTML5, CSS3 and plain (vanilla) JavaScript — no framework, no bundler, no build step</td>
+</tr>
+<tr>
+<td>Backend</td>
+<td>None. There is no server-side component, API endpoint or authentication layer</td>
+</tr>
+<tr class="alt">
+<td>Database</td>
+<td>None. Browser localStorage (key mindgrid-profile-v1) and a local text profile file (profile.txt)</td>
+</tr>
+<tr>
+<td>Second build</td>
+<td>C++17 console application (main.cpp), compiled with g++ -std=c++17 -O2 -Wall -Wextra -pedantic</td>
+</tr>
+<tr class="alt">
+<td>Development environment</td>
+<td>Any modern desktop browser opening web/index.html directly, or a local HTTP server; a C++17 compiler and a VT-capable terminal for the console build</td>
+</tr>
+<tr>
+<td>Automated verification</td>
+<td>node --test .\web\tests\engines.test.cjs — twelve engine and interface tests</td>
+</tr>
+<tr class="alt">
+<td>Core modules</td>
+<td>Sudoku, Connect Four, N-Queens Tour, 2048, player profile, solver benchmark suite</td>
+</tr>
+<tr>
+<td>Algorithms demonstrated</td>
+<td>Bit-mask constraint backtracking with minimum-remaining-values ordering, minimax with alpha-beta pruning, bitwise combinatorial enumeration, greedy one-ply heuristic evaluation</td>
+</tr>
+<tr class="alt">
+<td>Code size (source lines)</td>
+<td>app.js 378, main.cpp 311, styles.css 258, engines.test.cjs 205, index.html 58</td>
+</tr>
+<tr>
+<td>Project contributor</td>
+<td>Nitin Kumar (26MCA20235)</td>
+</tr>
+<tr class="alt">
+<td>Report date</td>
+<td>November 2026</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 1.1: Basic project information.</p>
+<h2>Aptitude Area Mapping</h2>
+<p>The four modules were chosen so that the arcade exercises the three standard aptitude areas rather than a single one. Table 1.2 states the mapping used consistently throughout this report, including in the Image Table in Section 7.</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:21.69%">
+<col style="width:20.48%">
+<col style="width:32.53%">
+<col style="width:25.3%">
+</colgroup>
+<thead><tr>
+<th>Aptitude area</th>
+<th>MindGrid module</th>
+<th>Skill exercised by the player</th>
+<th>What the code demonstrates</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Logical reasoning</td>
+<td>Sudoku</td>
+<td>Elimination, candidate sets, naked singles, box-line reasoning</td>
+<td>Bit-mask candidate computation and MRV-ordered backtracking</td>
+</tr>
+<tr class="alt">
+<td>Logical reasoning</td>
+<td>N-Queens Tour</td>
+<td>Spatial constraint reasoning, safe-square testing, systematic placement</td>
+<td>Bitwise column and diagonal masks with row-by-row enumeration</td>
+</tr>
+<tr>
+<td>Quantitative aptitude</td>
+<td>Connect Four</td>
+<td>Threat counting, lookahead, comparison of line values</td>
+<td>Minimax search with alpha-beta pruning and a weighted evaluation function</td>
+</tr>
+<tr class="alt">
+<td>Quantitative aptitude</td>
+<td>2048</td>
+<td>Powers of two, merge arithmetic, score accumulation under uncertainty</td>
+<td>Matrix sliding with single-merge rule and a weighted linear heuristic</td>
+</tr>
+<tr>
+<td>Data interpretation</td>
+<td>Benchmark dashboard</td>
+<td>Reading time, node count, cut-off count and solution count together</td>
+<td>Timed solver runs with per-algorithm statistics</td>
+</tr>
+<tr class="alt">
+<td>Data interpretation</td>
+<td>Player profile</td>
+<td>Comparing best, fastest and cumulative values over runs</td>
+<td>Minimum-time and maximum-score aggregation in localStorage and profile.txt</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 1.2: Aptitude area to MindGrid module mapping.</p>
+<h2>Scope</h2>
+<p>The scope covers interactive play of the four games with rule validation, generation of Sudoku puzzles with a guaranteed unique solution, automated solving and move suggestion for all four modules, a local player profile, and a four-task benchmark suite, in both a browser and a terminal. Search statistics are reported where the algorithm can produce them honestly: node counts and alpha-beta cut-offs for Connect Four, solution counts for N-Queens, suggested direction for 2048, and elapsed time for every task.</p>
+<p>The scope excludes user accounts, server-side storage, cross-device synchronisation, a remote leaderboard, multiplayer sessions, timed competitive rounds, and any content that is not implemented in the submitted source. The application is a practice and demonstration tool, not an assessment platform: it does not score a player's aptitude and it does not compare one device with another.</p>
+<h2>GitHub Repository</h2>
+<p>Repository link: ______________________________ (to be inserted by the student before submission; see Section 14 for the proof of upload).</p>
+<h1>2. EXECUTIVE SUMMARY AND PROBLEM STATEMENT</h1>
+<h2>Executive Summary</h2>
+<p>MindGrid shows that a multi-module aptitude practice application can be built entirely as a static front-end project. A single navigation shell exposes four games, a profile summary and a benchmark screen. The browser renders the shell from index.html, styles it from styles.css, and drives everything else from app.js, a 378-line module written as one immediately invoked function with no dependencies. State for each game is held in a plain object, each view is rebuilt from that state, and a single delegated click listener plus a keyboard listener route all interaction. Nothing is reloaded when the player moves between modules.</p>
+<p>The algorithmic layer is the part that turns the arcade into a teaching instrument. Sudoku is generated by seeding three independent bands, completing a full random grid, and then removing cells only while the puzzle keeps exactly one solution; the solver picks the cell with the fewest candidates at every step. Connect Four searches a bounded game tree with alpha-beta pruning over a fixed centre-first move order and scores positions with a weighted window count. N-Queens enumerates arrangements with three bit masks and reports the exact number of solutions for the selected board size. 2048 evaluates each of the four possible slides with a weighted heuristic and plays the best one. The benchmark screen runs all four and prints the measured cost of each.</p>
+<p>Everything runs on the user's device. Progress is written to localStorage under one key, the console build writes the same summary to profile.txt, and the console build measures solver time with a monotonic clock in microseconds. No personal data leaves the machine and no network service is required for any feature of either build.</p>
+<h2>Problem Statement</h2>
+<p>Aptitude practice material is usually presented in one of two disconnected forms. Puzzle collections give the player a grid and an answer key but no explanation of how the answer was reached. Algorithm demonstrations give the search procedure in isolation, often as a console snippet, without an interface a player can actually interact with, and without any record of progress. As a result, a learner who solves a Sudoku puzzle learns nothing about why a candidate was eliminated, and a learner who reads a minimax example never sees how many nodes the search actually visited.</p>
+<p>The problem addressed by this project is therefore to build one application in which the same four problems can be played interactively, solved algorithmically, and measured locally, so that the reasoning a player performs by hand and the search the program performs by machine can be compared directly. The application must remain simple to run, must not depend on a server, and must report only measurements it can honestly produce.</p>
+<h2>Project Objectives</h2>
+<ul>
+<li>• Provide one consistent interface for four distinct puzzle modules, with navigation, status feedback and a shared visual identity.</li>
+<li>• Enforce the rules of each game completely: no illegal Sudoku placement, no floating Connect Four disc, no attacked queen and no double merge in 2048.</li>
+<li>• Implement four different algorithmic approaches so that the modules illustrate constraint satisfaction, game-tree search, combinatorial enumeration and heuristic evaluation rather than repeating one technique.</li>
+<li>• Generate Sudoku puzzles that are guaranteed to have exactly one solution at every difficulty level.</li>
+<li>• Report solver effort, not only solver output: elapsed time, nodes visited, alpha-beta cut-offs, solution counts and suggested moves.</li>
+<li>• Keep a local record of progress and best results in both builds, without accounts or a server.</li>
+<li>• Verify the engine behaviour automatically with a test suite that runs against the same code the browser executes.</li>
+<li>• Keep the browser build free of any framework, package installation or build pipeline so that it can be opened directly.</li>
+</ul>
+<h2>Intended Users</h2>
+<p>The primary users are students preparing in logical reasoning, quantitative aptitude and data interpretation who want an interactive practice environment rather than a printed question bank, and who can read a worked deduction. The secondary users are instructors and reviewers demonstrating search techniques: the benchmark screen and the console build give a live, measurable example of backtracking, pruning and heuristic evaluation without any setup beyond opening a file or running one command.</p>
+<h2>Expected Learning Outcomes</h2>
+<p>A user who works through the modules and the worked examples in Section 5 should be able to: compute the candidate set of a Sudoku cell from row, column and box occupancy; explain why a minimum-remaining-values choice reduces search; evaluate a Connect Four window and explain why a defence weight is larger than the matching attack weight; state the number of solutions of a small N-Queens board and why the search space is far smaller than the naive placement count; compute the score produced by a 2048 slide; and interpret a benchmark card that shows a time together with a node or solution count.</p>
+<h1>3. CASE STUDY DESCRIPTION AND METHODOLOGY</h1>
+<h2>Case Study Description</h2>
+<p>The case study is the design, implementation and local operation of MindGrid in two environments: a browser as a static front-end application, and a terminal as a C++17 console program. The browser case was chosen because an aptitude practice tool has to be opened instantly to be used often, which rules out an install step; the console case was chosen because solver behaviour is easiest to inspect when output is plain text and the same measurement loop can be seen without a rendering layer.</p>
+<p>Both builds were developed against the same four problem definitions so that a result in one environment can be checked against the other. The console build is not a wrapper around the browser build: each implements its own state representation and its own solver, and the report compares them directly in Table 9.2, including the differences in evaluation weights and search depth that were tuned separately for each environment.</p>
+<h2>Development Methodology</h2>
+<ol>
+<li>1. Requirement identification: list the modules to practise (four games), the reasoning each should expose (candidate elimination, safe placement, lookahead, merge arithmetic), the controls each needs (undo, reset, hint, solve, difficulty) and the measurements worth reporting.</li>
+<li>2. Rule and state modelling: fix the board representation for each module before writing any interface code — an 81-cell flat array for Sudoku, a 6 by 7 grid for Connect Four, one column per row for N-Queens, and a 4 by 4 matrix for 2048.</li>
+<li>3. Algorithm design: choose one distinct technique per module, and decide what each solver can honestly report: a solved grid for Sudoku, a column plus node and cut-off counts for Connect Four, a solution count and first arrangement for N-Queens, and a direction for 2048.</li>
+<li>4. Interface design: prepare the navigation shell, the board layouts, the side panels, the status messages, the responsive rules and the keyboard controls in styles.css and index.html.</li>
+<li>5. Application logic: implement the engines, rendering and event routing in app.js as one immediately invoked function, keeping each engine in its own commented section so that it remains identifiable.</li>
+<li>6. Console parity: implement the same four modules behind one abstract Game interface in main.cpp so that the menu and the benchmark loop can treat all four polymorphically.</li>
+<li>7. Persistence: add a single localStorage key for the browser profile and a three-field text file for the console profile, with the fastest solver time stored as a running minimum.</li>
+<li>8. Verification: write automated engine tests that load app.js itself into a simulated DOM and assert rule correctness, then run a manual pass over navigation, responsiveness and solver completion.</li>
+<li>9. Documentation: record the run instructions in web/README.md and assemble this report from the implemented behaviour rather than from an intention.</li>
+</ol>
+<h2>Local Setup Procedure</h2>
+<p>Browser build: open web/index.html in a modern desktop or mobile browser. There is no installation, no dependency resolution and no build command. Local storage must be enabled if the progress summary is to survive a reload.</p>
+<pre>Browser:   open web/index.html
+Tests:     node --test .\web\tests\engines.test.cjs
+Console:   g++ -std=c++17 -O2 -Wall -Wextra -pedantic main.cpp -o mindgrid
+Run:       .\mindgrid.exe   (from a writable directory if the profile should be saved)</pre>
+<p>Console build: compile main.cpp with any C++17 compiler using the command above. The program presents a numbered arcade menu; option 6 runs the full benchmark suite. The build produces no warnings under -Wall -Wextra -pedantic. ANSI colour escapes are used for the interface, so a terminal that understands virtual terminal sequences displays the intended colours and any other terminal still displays correct text.</p>
+<h2>Testing and Verification Methodology</h2>
+<p>Correctness was verified at two levels. The automated level runs the real browser engine code inside a simulated DOM: the test harness reads app.js, injects a hook that exposes the engine functions, and executes the file with a fake document, fake storage and captured event listeners. This means the tests exercise the same functions the browser uses rather than a reimplementation. The manual level covers what the automated tests cannot: visual layout at narrow widths, pointer and keyboard interaction, and profile persistence across reloads.</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:7.23%">
+<col style="width:39.76%">
+<col style="width:53.01%">
+</colgroup>
+<thead><tr>
+<th>#</th>
+<th>Test</th>
+<th>What it asserts</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Arcade shell and routing</td>
+<td>The overview renders and every route displays its own screen title</td>
+</tr>
+<tr class="alt">
+<td>2</td>
+<td>Sudoku uniqueness at all difficulties</td>
+<td>Easy, Medium and Hard puzzles each solve to exactly one solution and keep the expected clue count</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sudoku selection</td>
+<td>Clicking a square and then a number pad value places the correct digit and marks the cell selected</td>
+</tr>
+<tr class="alt">
+<td>4</td>
+<td>Sudoku validation</td>
+<td>A correct value is accepted; a value that conflicts with a peer leaves the board unchanged</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Connect Four win and AI response</td>
+<td>The win detector returns the four winning cells and the depth-5 search takes an immediate win and blocks an immediate threat</td>
+</tr>
+<tr class="alt">
+<td>6</td>
+<td>Connect Four turn cycle</td>
+<td>A human drop disables input, the AI replies, and control returns to the human with two discs on the board</td>
+</tr>
+<tr>
+<td>7</td>
+<td>N-Queens known totals</td>
+<td>The bitwise solver returns 2 solutions for n = 4, 92 for n = 8 and 365,596 for n = 14</td>
+</tr>
+<tr class="alt">
+<td>8</td>
+<td>N-Queens interactive placement</td>
+<td>Attacked squares are rejected, safe squares are accepted, and a complete 4-Queens placement is produced</td>
+</tr>
+<tr>
+<td>9</td>
+<td>2048 merge rule and hint</td>
+<td>[2,2,2,2] slides to [4,4,0,0] with a gain of 8, each tile merges once, and the heuristic suggests a legal move</td>
+</tr>
+<tr class="alt">
+<td>10</td>
+<td>2048 auto-play bounds</td>
+<td>Auto-play stops at the 50-move limit and keeps one undo snapshot per move</td>
+</tr>
+<tr>
+<td>11</td>
+<td>2048 keyboard and undo</td>
+<td>An arrow key slides the board and the undo control restores the previous board exactly</td>
+</tr>
+<tr class="alt">
+<td>12</td>
+<td>Benchmark suite output</td>
+<td>A full run produces four labelled measurements for the four solvers</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 3.1: Automated engine test inventory (web/tests/engines.test.cjs).</p>
+<p>Test 7 is the most useful single check in the suite because the expected values are independent of the implementation: the number of solutions of the N-Queens problem is a published sequence, so a correct bitwise search must reproduce it exactly for n = 4, 8 and 14. Test 2 plays the same role for Sudoku, since a generator that fails the uniqueness condition produces a puzzle with more than one solution and the assertion fails immediately.</p>
+<h2>Evidence Basis</h2>
+<p>This report is written from the submitted source code, from the automated test suite, and from actual runs of both builds on the development machine. The screenshots in Sections 6 and 7 were captured from the running browser build, and the console figure was captured from a real benchmark suite run of the compiled executable. Timings quoted anywhere in the report are single observations of those runs, not averages and not specifications: they depend on the device, the browser or compiler, the operating system load and, for randomised modules, on the particular puzzle generated. No result in this report was estimated or invented.</p>
+<h1>4. SYSTEM ARCHITECTURE AND WORKFLOW</h1>
+<h2>Architecture</h2>
+<p>MindGrid is a static, local-first application with no server-side component. The browser loads three files, keeps all game state in memory as plain objects, rebuilds the visible view from that state after every interaction, and writes a small profile summary to localStorage. The console build follows the same shape in a different language: one abstract game interface, four concrete game classes, a profile object backed by a text file, and a menu loop that dispatches polymorphically to whichever game the player selects.</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:18.07%">
+<col style="width:27.71%">
+<col style="width:54.22%">
+</colgroup>
+<thead><tr>
+<th>Layer</th>
+<th>Components</th>
+<th>Responsibility</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Presentation</td>
+<td>web/index.html, web/styles.css</td>
+<td>Application shell, navigation rail, top bar, board grids, responsive rules, theme variables</td>
+</tr>
+<tr class="alt">
+<td>Application / UI logic</td>
+<td>web/app.js (routing, rendering, event delegation, keyboard handling)</td>
+<td>Rebuilds the active view from state, routes clicks and keys to engine calls, shows status and toast messages</td>
+</tr>
+<tr>
+<td>Engine</td>
+<td>Sudoku, Connect Four, N-Queens and 2048 sections inside app.js</td>
+<td>State transitions, rule validation, puzzle generation, solvers, heuristics</td>
+</tr>
+<tr class="alt">
+<td>Measurement</td>
+<td>timeSolver() in app.js; Utils::benchmarkUs() in main.cpp</td>
+<td>Wraps a solver call, records elapsed time, and keeps the running minimum in the profile</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>localStorage key mindgrid-profile-v1; profile.txt</td>
+<td>Solved count, best 2048 score and fastest solver time, stored on the device only</td>
+</tr>
+<tr class="alt">
+<td>Console build</td>
+<td>main.cpp (Utils, Game, PlayerProfile, four game classes, main)</td>
+<td>Independent implementation of the same four modules with an ASCII interface</td>
+</tr>
+<tr>
+<td>Verification</td>
+<td>web/tests/engines.test.cjs</td>
+<td>Executes the real browser engine code in a simulated DOM and asserts rule correctness</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 4.1: Architecture layers and responsibilities.</p>
+<p>Design principle: the word API is not used for a network layer. The browser build contains no fetch call, no endpoint and no remote data source. All logic that looks like a service is an ordinary function inside app.js, and all data is either generated at run time by a puzzle generator or typed by the player.</p>
+<h2>Browser Data Flow</h2>
+<ol>
+<li>1. Load: the browser parses index.html, applies styles.css, and executes app.js, which is wrapped in a single immediately invoked function expression with strict mode enabled.</li>
+<li>2. Initialise: the profile is read defensively — safeRead() parses the stored JSON inside a try block and returns an empty object on any failure — so a corrupted or absent entry cannot stop the application.</li>
+<li>3. Render: renderHome() writes the overview into the #view section and saveProfile() refreshes the solved count shown in the sidebar.</li>
+<li>4. Interact: one delegated click listener on document inspects the clicked element for data-screen, data-cell, data-value, data-difficulty, data-col, data-qrow or data-action attributes and calls the matching handler. Delegation is used deliberately because every view replaces the whole innerHTML of #view.</li>
+<li>5. Update state: the handler mutates the relevant state object (sudoku, connect, queens or game2048), which is the single source of truth for what is drawn.</li>
+<li>6. Re-render: the active view is rebuilt from the new state, so the interface can never show something the state does not contain.</li>
+<li>7. Persist: after a solved puzzle, a 2048 move or a timed solver run, saveProfile() serialises the profile back to localStorage.</li>
+</ol>
+<h2>Console Data Flow</h2>
+<p>main() loads profile.txt, constructs all four game objects once so that a puzzle or board survives between menu visits, and enters the arcade menu. A game selection dispatches through the abstract Game pointer to playInteractive() or runAISolverBenchmark(); the benchmark suite iterates an initialiser list of the four pointers. Every timed solver invocation is wrapped in the generic Utils::benchmarkUs(), which reads a monotonic clock before and after the call and returns whole microseconds; the result is passed to PlayerProfile::recordSolve(), which increments the solved count, keeps the smallest time seen, and writes the file. The profile is written again on exit.</p>
+<h2>Project File Inventory</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:33.73%">
+<col style="width:13.25%">
+<col style="width:53.01%">
+</colgroup>
+<thead><tr>
+<th>Path</th>
+<th>Lines</th>
+<th>Purpose</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>web/index.html</td>
+<td>58</td>
+<td>Application shell: sidebar, navigation, top bar, view container, footer, toast and modal roots</td>
+</tr>
+<tr class="alt">
+<td>web/styles.css</td>
+<td>258</td>
+<td>Theme variables, layout grid, board styling for four games, tile colours, three responsive breakpoints</td>
+</tr>
+<tr>
+<td>web/app.js</td>
+<td>378</td>
+<td>All engines, rendering, routing, event handling, profile persistence and the benchmark suite</td>
+</tr>
+<tr class="alt">
+<td>web/README.md</td>
+<td>23</td>
+<td>Run instructions and file overview for the browser build</td>
+</tr>
+<tr>
+<td>web/tests/engines.test.cjs</td>
+<td>205</td>
+<td>Twelve automated tests executed against the real app.js engine code</td>
+</tr>
+<tr class="alt">
+<td>main.cpp</td>
+<td>311</td>
+<td>C++17 console arcade: utilities, profile, four game classes behind one interface, menu and benchmark loop</td>
+</tr>
+<tr>
+<td>profile.txt</td>
+<td>1</td>
+<td>Console profile data: solved count, best 2048 score, fastest solver time in microseconds</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 4.2: Project file inventory.</p>
+<div><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-home.png" style="width:414pt"></div>
+<p class="caption">Figure 4.1: The MindGrid overview screen, showing the navigation rail, the four game cards and the tools entry.</p>
+<h1>5. IMPLEMENTATION AND FUNCTIONAL (APTITUDE) MODULES</h1>
+<h2>5.1 Module Summary</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:15.66%">
+<col style="width:20.48%">
+<col style="width:27.71%">
+<col style="width:19.28%">
+<col style="width:16.87%">
+</colgroup>
+<thead><tr>
+<th>Module</th>
+<th>State representation</th>
+<th>Algorithm</th>
+<th>Difficulty / size knobs</th>
+<th>Solver output</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Sudoku</td>
+<td>Flat 81-cell array plus three 9-bit mask arrays (rows, columns, boxes)</td>
+<td>Backtracking with minimum-remaining-values ordering; dig-and-verify generation with uniqueness check</td>
+<td>Easy 35, Medium 43, Hard 50 cells removed</td>
+<td>Solved grid, elapsed time</td>
+</tr>
+<tr class="alt">
+<td>Connect Four</td>
+<td>6 by 7 integer grid, 0 empty, 1 human, 2 AI</td>
+<td>Minimax with alpha-beta pruning, centre-first move order, fixed-depth leaf evaluation</td>
+<td>Search depth 5 (browser), 6 below the root (console)</td>
+<td>Chosen column, nodes, cut-offs, elapsed time</td>
+</tr>
+<tr>
+<td>N-Queens Tour</td>
+<td>One column per row; three bit masks for attacks</td>
+<td>Bitwise row-by-row enumeration counting every solution</td>
+<td>Board size n from 4 to 14</td>
+<td>Solution count, first arrangement, elapsed time</td>
+</tr>
+<tr class="alt">
+<td>2048</td>
+<td>4 by 4 matrix of tile values plus a score</td>
+<td>One-ply greedy choice over four slides using a weighted heuristic</td>
+<td>Fixed board; auto-play capped at 50 moves</td>
+<td>Suggested direction, elapsed time</td>
+</tr>
+<tr>
+<td>Profile</td>
+<td>One localStorage object; three whitespace-separated fields in profile.txt</td>
+<td>Running maximum for score, running minimum for time, counter for solves</td>
+<td>None</td>
+<td>Solved count, best score, fastest time</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 5.1: Module summary — state, algorithm and controls.</p>
+<h2>5.2 Sudoku — Logical Reasoning Module</h2>
+<p>Representation. The board is a flat array of 81 values where 0 means empty. Alongside it the engine keeps three arrays of nine integers: one mask per row, one per column and one per 3 by 3 box. A mask uses bit v−1 to record that digit v already appears in that unit, so occupancy tests are single bitwise operations rather than scans. The box containing cell (r, c) is obtained by the formula used in both builds:</p>
+<p>b(r, c) = ⌊br / 3⌋ × 3 + ⌊bc / 3⌋        FULL = 2⁹ − 1 = 511</p>
+<p>Candidate computation. A digit is legal in a cell exactly when it is absent from all three units that meet there. With R(r), C(c) and B(b) denoting the three masks, the candidate set of a cell is:</p>
+<p>Cand(r, c) = FULL − ( R(r) ∪ C(c) ∪ B(b(r, c)) )          n = |Cand(r, c)| = popcount( Cand(r, c) )</p>
+<p>The engine counts the candidates with Brian Kernighan's popcount, which clears the lowest set bit at every step and therefore runs once per candidate rather than once per digit: for (m = mask; m; m &amp;= m − 1) count++. This matters because the count is computed for every empty cell at every node of the search.</p>
+<p>Solver. The solver is a recursive backtracking search that chooses, at each node, the empty cell with the fewest candidates — the minimum-remaining-values heuristic. A cell with no candidates makes the node fail immediately, and a cell with exactly one candidate is committed at once without further scanning. Candidates are then tried one at a time; before recursing, the digit is added to the three masks, and on return it is removed, which keeps the mask arrays consistent with the grid at every depth.</p>
+<p>Worked example of one deduction step. Consider an empty cell at row 3, column 5 (1-based) in a partially filled grid. Suppose the row already contains {2, 4, 7, 9}, the column contains {1, 4, 7, 8} and the box contains {4, 7, 5}. The union of these is {1, 2, 4, 5, 7, 8, 9}, so the candidate set is {3, 6}. If the same row's box partner later removes 6, the cell has exactly one candidate and the solver commits 3 without searching. This is precisely the naked-single case that both builds detect and resolve before any branching, and it is the same step a player is taught to make by hand.</p>
+<p>Generation and uniqueness. A puzzle is produced in three stages. First the three diagonal bands of boxes are filled with shuffled digits; because those boxes share no row or column, each choice is independent and the grid always remains completable. Second, the completed grid is filled by running the same solver with a randomised candidate order, which yields a random valid solution. Third, cells are visited in shuffled order and each is blanked only if the resulting puzzle still has exactly one solution; that test re-solves a copy of the puzzle with the search capped at two solutions, so the generator never needs to enumerate the whole solution space.</p>
+<p>keep the removal if and only if  solutionCount(puzzle, limit = 2) = 1</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:15.66%">
+<col style="width:18.07%">
+<col style="width:18.07%">
+<col style="width:21.69%">
+<col style="width:26.51%">
+</colgroup>
+<thead><tr>
+<th>Level</th>
+<th>Cells removed</th>
+<th>Clues left</th>
+<th>Empty cells at start</th>
+<th>Upper bound on naive search</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Easy</td>
+<td>35</td>
+<td>46</td>
+<td>35</td>
+<td>9³⁵ ≈ 2.95 × 10³³ (before constraint pruning)</td>
+</tr>
+<tr class="alt">
+<td>Medium</td>
+<td>43</td>
+<td>38</td>
+<td>43</td>
+<td>9⁴³ ≈ 1.52 × 10⁴¹</td>
+</tr>
+<tr>
+<td>Hard</td>
+<td>50</td>
+<td>31</td>
+<td>50</td>
+<td>9⁵⁰ ≈ 5.15 × 10⁴⁷</td>
+</tr>
+<tr class="alt">
+<td>Benchmark task</td>
+<td>42</td>
+<td>39</td>
+<td>42</td>
+<td>single solve, measured in milliseconds</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 5.2: Sudoku difficulty configuration and its arithmetic.</p>
+<p>The right-hand column is an upper bound only, and it is stated here to make one point about aptitude: the bound is astronomically larger than the time actually observed, because each placement removes candidates from up to three units at once. The browser build solves a 42-removal puzzle in a fraction of a millisecond in the observed run reported in Section 7. The automated tests assert that every difficulty level produces a puzzle whose solution count is exactly 1, and that the clue count equals 81 minus the configured removals.</p>
+<h2>5.3 Connect Four — Lookahead and Quantitative Evaluation Module</h2>
+<p>Representation and rules. The board is a 6 by 7 grid. A drop in column c lands in the lowest empty row of that column, found by scanning upward, and a column whose top cell is occupied rejects the move. A win test walks, from each of a player's own cells, the four direction vectors (0,1), (1,0), (1,1) and (1,−1), counting consecutive discs; four or more in any direction is a win. The number of distinct length-4 windows on this board is 69: 24 horizontal, 21 vertical and 24 diagonal, which is the quantity the evaluation function sums over.</p>
+<p>Evaluation function. A leaf position is scored as a centre-control term plus a sum over all 69 windows. Only windows that contain discs of one player and none of the other contribute; a window holding both colours is dead and scores zero. Writing a for the number of AI discs and h for the number of human discs in a window:</p>
+<p>E = w₀ · Aₔₑₙₜₑₐ + Σᴡₙₔₙₔₓ [ f(a) − g(h) ]        where f applies only if h = 0 and g applies only if a = 0</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:31.33%">
+<col style="width:18.07%">
+<col style="width:18.07%">
+<col style="width:32.53%">
+</colgroup>
+<thead><tr>
+<th>Window composition</th>
+<th>Browser build</th>
+<th>Console build</th>
+<th>Reading of the asymmetry</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI disc in the centre column (per disc)</td>
+<td>+5</td>
+<td>+4</td>
+<td>Centre control is a small, always-positive positional term</td>
+</tr>
+<tr class="alt">
+<td>3 AI discs, no human disc</td>
+<td>+90</td>
+<td>+80</td>
+<td>A winning threat the opponent must answer</td>
+</tr>
+<tr>
+<td>2 AI discs, no human disc</td>
+<td>+15</td>
+<td>+12</td>
+<td>A developing line, worth less than a single forced move</td>
+</tr>
+<tr class="alt">
+<td>1 AI disc, no human disc</td>
+<td>+2</td>
+<td>+2</td>
+<td>Nearly worthless on its own</td>
+</tr>
+<tr>
+<td>3 human discs, no AI disc</td>
+<td>−110</td>
+<td>−100</td>
+<td>Larger in magnitude than the matching AI threat</td>
+</tr>
+<tr class="alt">
+<td>2 human discs, no AI disc</td>
+<td>−18</td>
+<td>−14</td>
+<td>Defensive attention to a developing human line</td>
+</tr>
+<tr>
+<td>1 human disc, no AI disc</td>
+<td>−2</td>
+<td>−2</td>
+<td>Symmetric with the AI single-disc term</td>
+</tr>
+<tr class="alt">
+<td>Terminal AI win</td>
+<td>+(100000 + depth)</td>
+<td>+(100000 + depth)</td>
+<td>Depth term prefers a sooner win</td>
+</tr>
+<tr>
+<td>Terminal human win</td>
+<td>−(100000 + depth)</td>
+<td>−(100000 + depth)</td>
+<td>Depth term prefers a later loss</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 5.3: Evaluation weights used by the two builds.</p>
+<p>The asymmetry between +90 and −110 is the most instructive number in the module. Because the magnitude of the defensive penalty exceeds the offensive bonus for the same line length, the agent blocks an opponent threat in preference to building its own when both are equally close to completion. A player who reviews the evaluation table can predict that behaviour before seeing a single move, which is exactly the kind of reasoning the quantitative module is meant to practise.</p>
+<p>Search. The move choice is a minimax search with alpha-beta pruning. At each node the columns are tried in the fixed centre-first order 3, 2, 4, 1, 5, 0, 6, which places the most valuable columns early and therefore produces cut-offs earlier. The browser build searches to depth 5 below the move under consideration; the console build uses depth 6, which is why its output labels the task a depth-7 move counting the root. Terminal values dominate leaf values by three orders of magnitude, so a forced win is never traded for a favourable evaluation.</p>
+<p>Complexity arithmetic. With seven columns and depth d, a full tree would contain 7ᵈ nodes: 16,807 at depth 5 and 117,649 at depth 6. Alpha-beta pruning with good move ordering reduces the effective cost to the order of 2 · b^(d/2), about 252 nodes for depth 5 in the ideal case. The observed run reported in Section 7 visited 1,688 nodes with 496 cut-offs in the browser and 24,838 nodes with 6,654 cut-offs in the console, which sits between those two bounds and shows the ordering helping without being perfect.</p>
+<p>Worked example. A window containing three yellow AI discs and an empty fourth cell, with no red disc, scores +90. A window containing three red discs and one empty cell scores −110. If the AI has both, the total for those two windows is −20, and the search will prefer the line that removes the red threat, because eliminating −110 gains more than securing +90. This single comparison is the reason the automated test asserts that the agent blocks a three-in-a-row rather than extending its own.</p>
+<h2>5.4 N-Queens Tour — Combinatorial Reasoning Module</h2>
+<p>Representation. One queen occupies each row, so a placement is a list of n column indices. Attacks are tracked with three bit masks of n bits: the columns already used, the diagonals attacking the next row from the left, and the diagonals attacking it from the right. For a board of size n the mask of all squares is FULL = 2ⁿ − 1, and the free squares of the current row are:</p>
+<p>available = FULL − ( cols ∪ left ∪ right )        pick lowest bit:  bit = available ∩ (−available)</p>
+<p>recurse with:  cols' = cols ∪ bit,   left' = ( (left ∪ bit) ≲ 1 ) ∩ FULL,   right' = ( right ∪ bit ) ≳ 1</p>
+<p>The expression available &amp; −available isolates the lowest set bit in one operation, and the shifted masks express the fact that a diagonal threat moves one square sideways as each row is descended. Both builds use this formulation; the console build uses 32-bit masks, which is the reason the interactive board size is limited to 14 rows.</p>
+<p>Search and counting. The recursion proceeds row by row. When the last row is filled, one solution is counted; the browser build additionally retains the first arrangement it finds so that the player can see a complete placement. Because the search enumerates all valid arrangements, the count it returns for a given n is exact and can be checked against the published sequence, which the automated tests do for n = 4, 8 and 14.</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:13.25%">
+<col style="width:24.1%">
+<col style="width:20.48%">
+<col style="width:18.07%">
+<col style="width:24.1%">
+</colgroup>
+<thead><tr>
+<th>n</th>
+<th>Free placement of n queens on n² squares</th>
+<th>One per row (nⁿ)</th>
+<th>Permutations of columns (n!)</th>
+<th>Valid solutions found</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>C(16, 4) = 1,820</td>
+<td>4⁴ = 256</td>
+<td>4! = 24</td>
+<td>2</td>
+</tr>
+<tr class="alt">
+<td>8</td>
+<td>C(64, 8) = 4,426,165,368</td>
+<td>8⁸ = 16,777,216</td>
+<td>8! = 40,320</td>
+<td>92</td>
+</tr>
+<tr>
+<td>14</td>
+<td>C(196, 14) ≈ 4.6 × 10¹⁷</td>
+<td>14¹⁴ ≈ 1.1 × 10¹⁶</td>
+<td>14! = 87,178,291,200</td>
+<td>365,596</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 5.4: Search space reduction for three board sizes.</p>
+<p>Worked example for n = 4. Place the first queen in column 1 of row 0. Row 1 then has columns 0, 1 and 2 attacked, so only column 3 is safe. With queens at rows 0 and 1 in columns 1 and 3, row 2 has only column 0 free, and row 3 only column 2. The resulting arrangement [1, 3, 0, 2] is one of the two solutions the solver counts, and the automated test asserts exactly this list. The same reasoning, applied by hand, is the safe-square test the interface enforces on every click: a column conflict or a diagonal conflict of the form |column difference = row difference| is rejected.</p>
+<p>Interactive rule. The player places one queen per row in order; the interface marks attacked squares, refuses an unsafe square, allows the last queen to be undone, and offers both a solve action, which fills a complete arrangement, and a count action, which reports the total number of arrangements for the selected size without placing anything.</p>
+<h2>5.5 2048 — Quantitative Aptitude Module</h2>
+<p>Representation and merge rule. The board is a 4 by 4 matrix whose values are powers of two, with 0 for an empty cell. A slide moves every tile as far as possible in the chosen direction and merges equal neighbouring pairs in travel order, with the rule that a tile produced by a merge cannot merge again in the same move. Each merge adds the value of the resulting tile to the score, so the score is the sum of all merged results rather than the sum of the tiles on the board.</p>
+<p>tile value = 2ᵏ for k ≥ 1        merge: 2ᵏ + 2ᵏ = 2ᵏ⁺¹, score += 2ᵏ⁺¹        spawn: 2 with probability 0.9, 4 with probability 0.1</p>
+<p>Worked example of one slide. The row [2, 2, 2, 2] slid to the left becomes [4, 4, 0, 0] with a gain of 8, not [8, 0, 0, 0]: the first pair merges into 4 and the second pair merges into 4, and neither resulting tile is allowed to merge again. The automated test asserts exactly this result and the gain of 8, because it is the single rule that distinguishes a correct implementation from a naive one. A vertical example from the same test, [2, 2, 4, 0] moved up, yields [4, 4, 0, 0].</p>
+<p>Score arithmetic. Reaching the 2048 tile from 2-valued spawns alone requires 1,024 spawned tiles and merges at ten levels. At the level that creates a tile of value 2ᵏ, exactly 2048 / 2ᵏ merges occur, each contributing 2ᵏ, so every level contributes 2,048 to the score:</p>
+<p>minimum score for one 2048 tile = Σ (k = 2 … 11) [ (2048 / 2ᵏ) × 2ᵏ ] = 10 × 2048 = 20,480</p>
+<p>This identity is a compact arithmetic exercise in its own right and explains why a player's score is far larger than the largest tile on the board. When a 4 is spawned instead of a 2, one merge at the lowest level is skipped and the total falls slightly below 20,480.</p>
+<p>Heuristic move selection. The helper evaluates each of the four directions by applying the slide to a copy of the board and scoring the result with a weighted linear function of four positional features. The move value adds a small share of the immediate gain:</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:25.3%">
+<col style="width:14.46%">
+<col style="width:30.12%">
+<col style="width:30.12%">
+</colgroup>
+<thead><tr>
+<th>Feature</th>
+<th>Weight</th>
+<th>Definition</th>
+<th>Behaviour it produces</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Empty cells</td>
+<td>+260</td>
+<td>Count of cells holding 0</td>
+<td>Dominant term: keeping the board open is valued above everything else</td>
+</tr>
+<tr class="alt">
+<td>Monotonicity</td>
+<td>−14</td>
+<td>Sum over adjacent non-empty pairs of |log₂ a − log₂ b|</td>
+<td>Penalises jagged boards; measured in tile exponents, not raw values</td>
+</tr>
+<tr>
+<td>Corner bonus</td>
+<td>+180</td>
+<td>1 if the largest tile sits in any corner, else 0</td>
+<td>Encourages keeping the largest tile anchored rather than central</td>
+</tr>
+<tr class="alt">
+<td>Largest tile</td>
+<td>+5</td>
+<td>log₂ of the maximum tile value, with 1 as the floor</td>
+<td>Mild preference for progress; too small to dominate the other terms</td>
+</tr>
+<tr>
+<td>Immediate gain</td>
+<td>+0.1</td>
+<td>Score earned by the candidate slide, added to the heuristic</td>
+<td>Breaks ties between moves that leave equally good shapes</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 5.5: 2048 heuristic features and weights (identical in both builds).</p>
+<p>H(board) = 260 · E − 14 · M + 180 · C + 5 · log₂(max(1, Tₘₐₓ))        value(move) = H(after) + 0.1 · gained</p>
+<p>Worked example. On the observed mid-game board shown in Figure 6.5, the tiles present are 16, 8, 8, 4, 2, 2 and 2 with seven empty cells. The heuristic is dominated by the empty-cell term: 260 × 7 = 1,820, while the monotonicity penalty for the same shape is a small two-digit number, and the largest tile contributes 5 × log₂ 16 = 20. Any move that keeps the board open therefore outranks any move that merges for a slightly larger tile, which is the same advice the side panel gives in words.</p>
+<p>Limits of the helper. The selection is a greedy one-ply policy: it evaluates the immediate successor of each direction and does not model the randomness of the next spawn, so it is not an expectimax search. Undo is available because each slide pushes a whole-board and score snapshot onto a history stack, and auto-play is bounded at 50 moves per activation so that a runaway loop cannot freeze the interface.</p>
+<h2>5.6 Benchmark Suite — Data Interpretation Module</h2>
+<p>The benchmark screen runs four fixed tasks and presents one card per task. Each task is chosen so that its cost is meaningful and its correctness is checkable: a Sudoku solve of a freshly generated 42-removal puzzle, a depth-5 Connect Four search from a seeded four-disc position, an N-Queens enumeration at the currently selected board size, and a best-move scan over a fixed 4 by 4 2048 board. The browser measures with a monotonic high-resolution clock and reports milliseconds; the console measures with a steady clock and reports microseconds, except for the N-Queens task, which reports milliseconds.</p>
+<p>Each card pairs a time with a second statistic, and that pairing is the point of the module. A time on its own invites the wrong conclusion, because the four tasks are not comparable workloads. Read with its statistic, the same number says something useful: 1,688 nodes and 496 cut-offs explain why the Connect Four card is two orders of magnitude slower than the Sudoku card, and the count of 92 arrangements explains what the N-Queens search actually produced. The fastest time seen is retained in the profile as a running minimum, so repeated runs give the player a small data set to interpret rather than a single reading.</p>
+<h2>5.7 Consolidated Formula Reference</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:20.48%">
+<col style="width:51.81%">
+<col style="width:27.71%">
+</colgroup>
+<thead><tr>
+<th>Module</th>
+<th>Formula or rule as implemented</th>
+<th>Where it appears</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Sudoku</td>
+<td>b(r, c) = ⌊br/3⌋ × 3 + ⌊bc/3⌋</td>
+<td>boxIndex(), both builds</td>
+</tr>
+<tr class="alt">
+<td>Sudoku</td>
+<td>Cand(r, c) = FULL − (R(r) ∪ C(c) ∪ B(b)), FULL = 511</td>
+<td>candidate(), sudokuMasks()</td>
+</tr>
+<tr>
+<td>Sudoku</td>
+<td>|Cand| by Kernighan popcount: m ← m ∩ (m − 1)</td>
+<td>cell count loop</td>
+</tr>
+<tr class="alt">
+<td>Sudoku</td>
+<td>unique puzzle ⇔ solutionCount(puzzle, 2) = 1</td>
+<td>makeSudokuPuzzle(), generate()</td>
+</tr>
+<tr>
+<td>Sudoku</td>
+<td>clues = 81 − removals, removals ∈ {35, 43, 50}</td>
+<td>difficulty configuration</td>
+</tr>
+<tr class="alt">
+<td>Connect Four</td>
+<td>landing(c) = lowest empty row in column c</td>
+<td>connectDrop(), landing()</td>
+</tr>
+<tr>
+<td>Connect Four</td>
+<td>E = 5·A_centre + Σ₆₉ windows [f(a) − g(h)]</td>
+<td>connectEval(), evaluate()</td>
+</tr>
+<tr class="alt">
+<td>Connect Four</td>
+<td>terminal = ±(100,000 + depth)</td>
+<td>minimax base cases</td>
+</tr>
+<tr>
+<td>Connect Four</td>
+<td>full tree 7ᵈ; ideal pruned tree ≈ 2·7^(d/2)</td>
+<td>complexity discussion</td>
+</tr>
+<tr class="alt">
+<td>N-Queens</td>
+<td>available = FULL − (cols ∪ left ∪ right), FULL = 2ⁿ − 1</td>
+<td>queenSearch(), search()</td>
+</tr>
+<tr>
+<td>N-Queens</td>
+<td>lowest bit = available ∩ (−available)</td>
+<td>bit extraction loop</td>
+</tr>
+<tr class="alt">
+<td>N-Queens</td>
+<td>diagonals: ((left|bit) ≲ 1) ∩ FULL, (right|bit) ≳ 1</td>
+<td>recursive call</td>
+</tr>
+<tr>
+<td>N-Queens</td>
+<td>attacked ⇔ same column or |cᵣ − c₂| = |r₁ − r₂|</td>
+<td>queenSafe(), safe()</td>
+</tr>
+<tr class="alt">
+<td>2048</td>
+<td>merge: 2ᵏ + 2ᵏ = 2ᵏ⁺¹ once per tile per move</td>
+<td>apply2048(), move()</td>
+</tr>
+<tr>
+<td>2048</td>
+<td>spawn: P(2) = 0.9, P(4) = 0.1</td>
+<td>spawn loops in both builds</td>
+</tr>
+<tr class="alt">
+<td>2048</td>
+<td>H = 260E − 14M + 180C + 5·log₂ Tₘₐₓ</td>
+<td>heuristic2048(), heuristic()</td>
+</tr>
+<tr>
+<td>2048</td>
+<td>value = H(after) + 0.1 × gained</td>
+<td>best2048(), bestDirection()</td>
+</tr>
+<tr class="alt">
+<td>2048</td>
+<td>minimum score to 2048 = 10 × 2048 = 20,480</td>
+<td>score arithmetic</td>
+</tr>
+<tr>
+<td>Profile</td>
+<td>fastest = min over runs; best = max over runs</td>
+<td>timeSolver(), recordSolve(), recordScore()</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 5.6: Formula reference for all four modules.</p>
+<h1>6. USER INTERFACE AND PROJECT EVIDENCE</h1>
+<h2>Interface Structure</h2>
+<p>The application is a single-page shell: a fixed navigation rail on the left, a top bar with a breadcrumb and a status pill, and one content region that is replaced whenever the route changes. The rail carries the brand mark, the four game entries numbered 01 to 04, a tools group holding the benchmark screen, and a profile mini-card at the foot showing the stored solved count. Every screen follows the same heading pattern — an eyebrow label naming the reasoning skill, the module title, a one-line instruction, and the board with its side panels — so that the player never has to relearn the layout.</p>
+<p>The visual system is defined by CSS custom properties rather than hard-coded values: a dark green ink for the rail, a pale paper background for the content area, a lime accent for active controls, and separate accent pairs for each game card. The boards themselves are drawn with CSS grid: nine equal columns for Sudoku with heavier separators on every third boundary, a green-framed grid of circular holes for Connect Four with red and yellow discs, a checkerboard of light and dark squares with attacked squares marked for N-Queens, and rounded tiles whose fill colour encodes the tile value.</p>
+<div><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-home.png" style="width:414pt"></div>
+<p class="caption">Figure 6.1: Overview screen — navigation rail, four game cards with their algorithm tags, and the tools entry.</p>
+<div><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-sudoku.png" style="width:414pt"></div>
+<p class="caption">Figure 6.2: Sudoku in play at Medium difficulty (38 clues). Givens are shown in cyan-dark type, solver-assisted entries in green, the selected square outlined, with the number pad, hint, solve and undo controls at the right.</p>
+<div><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-connect.png" style="width:414pt"></div>
+<p class="caption">Figure 6.3: Connect Four against the alpha-beta agent. The column drop controls sit above the board and the side panel reports 4,539 nodes searched with 815 cut-offs on the last AI move.</p>
+<div><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-queens.png" style="width:414pt"></div>
+<p class="caption">Figure 6.4: N-Queens Tour on an 8 by 8 board after the solve action, showing the first arrangement found and the total count of 92 valid arrangements.</p>
+<div><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-2048.png" style="width:414pt"></div>
+<p class="caption">Figure 6.5: 2048 mid-game after fifteen keyboard slides, score 68, with the helper suggesting a direction and the auto-play control bounded at 50 moves.</p>
+<div><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-benchmarks.png" style="width:414pt"></div>
+<p class="caption">Figure 6.6: Benchmark dashboard after a full run of the four tasks, each card pairing an elapsed time with a second statistic.</p>
+<div><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-console.png" style="width:414pt"></div>
+<p class="caption">Figure 6.7: C++17 console build running the all-algorithms benchmark suite; the arcade menu, the solved Sudoku grid and the four measured solver lines.</p>
+<h2>Controls and Feedback</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:18.07%">
+<col style="width:42.17%">
+<col style="width:39.76%">
+</colgroup>
+<thead><tr>
+<th>Module</th>
+<th>Player controls</th>
+<th>Feedback given</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Sudoku</td>
+<td>Click a square, then a number pad key or a digit 1–9; Backspace or Delete clears; arrow keys move the selection; Easy / Medium / Hard; Hint; Solve grid; Undo; New puzzle</td>
+<td>Givens and player entries are styled differently, conflicts are refused rather than applied, the selected square and its peers are highlighted, the clue count is shown, and a solve reports elapsed milliseconds</td>
+</tr>
+<tr class="alt">
+<td>Connect Four</td>
+<td>Click a numbered column arrow; New match</td>
+<td>Turn indicator, the AI's reply, the last search reported as nodes and cut-offs, and the winning line outlined when the game ends</td>
+</tr>
+<tr>
+<td>N-Queens</td>
+<td>Click a safe square in the next row; board size selector 4–14; Undo; Clear; New board; Solve; Count</td>
+<td>Attacked squares are marked, unsafe clicks are refused, a solved board shows the arrangement, and the count action reports the exact number of arrangements with its time</td>
+</tr>
+<tr class="alt">
+<td>2048</td>
+<td>W/A/S/D or arrow keys; Suggest; Auto-play 50; Undo move; New board</td>
+<td>Score, tile colours by value, the suggested direction, and a game-over state that disables the controls</td>
+</tr>
+<tr>
+<td>Benchmarks</td>
+<td>Run all benchmarks</td>
+<td>Four result cards with time and statistic, a toast confirming completion, and the fastest time stored in the profile</td>
+</tr>
+<tr class="alt">
+<td>Global</td>
+<td>Navigation rail, Help dialog, keyboard activation of game cards</td>
+<td>Breadcrumb names the active screen, the sidebar shows the stored solved count, and the layout adapts at 1100, 780 and 480 pixels</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 6.1: Interaction model per module.</p>
+<h2>Interface Characteristics</h2>
+<ul>
+<li>• Responsive layout with three breakpoints: a two-column game area at 1100 pixels, a compact bottom navigation bar at 780 pixels, and a single-column benchmark grid at 480 pixels.</li>
+<li>• Semantic structure with an aria-live view region, a status element for the toast, labelled board cells that announce row, column and value, and a labelled navigation region.</li>
+<li>• Full keyboard play for the two modules where it matters most: digit and arrow-key Sudoku entry, and arrow or WASD slides in 2048.</li>
+<li>• State-derived rendering: every view is rebuilt from the current state object, so the interface cannot display a position the engine does not hold.</li>
+<li>• No external requests: the interface uses no framework, no web fonts loaded from a service, and no remote assets, so it behaves identically online and offline.</li>
+</ul>
+<h1>7. IMAGE TABLE: STRUCTURED DATA AND PROBLEM-SOLVING MATRICES</h1>
+<h2>Purpose and How to Read This Section</h2>
+<p>This section is the report's Image Table: a single place where the structured data of the project, its visual summaries and its problem-solving matrices are presented together in a bordered table layout. It serves three purposes. It collects the numbers that a reader otherwise has to hunt through Sections 4 to 6. It shows each deduction as a row-by-row matrix rather than as prose, which is how the same reasoning is expected to be written in an aptitude answer. And it pairs every figure captured from the running application with the measurement that the figure represents, so that a screenshot is always tied to a number and a number is always tied to a source.</p>
+<p>Reading conventions used throughout: a mask is written as the set of digits it contains; − in a candidate column means the digit is already used in one of the three units; a value in bold italics marks a cell the engine committed without branching; and every observed number is a single run on the development machine, reported as an observation rather than a specification.</p>
+<h2>Structured Data Matrix</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:14.46%">
+<col style="width:16.87%">
+<col style="width:19.28%">
+<col style="width:21.69%">
+<col style="width:27.71%">
+</colgroup>
+<thead><tr>
+<th>Module</th>
+<th>Aptitude area</th>
+<th>Technique class</th>
+<th>Deterministic or randomised</th>
+<th>Metrics reported to the player</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Sudoku</td>
+<td>Logical reasoning</td>
+<td>Constraint satisfaction with MRV ordering</td>
+<td>Generation randomised; search deterministic</td>
+<td>Elapsed milliseconds; clue count; solved grid</td>
+</tr>
+<tr class="alt">
+<td>Connect Four</td>
+<td>Quantitative aptitude</td>
+<td>Adversarial game-tree search with pruning</td>
+<td>Deterministic for a fixed position</td>
+<td>Elapsed milliseconds; nodes; alpha-beta cut-offs; chosen column</td>
+</tr>
+<tr>
+<td>N-Queens Tour</td>
+<td>Logical reasoning</td>
+<td>Combinatorial enumeration with bit masks</td>
+<td>Deterministic count; first arrangement order-dependent</td>
+<td>Elapsed milliseconds; exact solution count; first arrangement</td>
+</tr>
+<tr class="alt">
+<td>2048</td>
+<td>Quantitative aptitude</td>
+<td>Greedy one-ply heuristic evaluation</td>
+<td>Board randomised by spawn; evaluation deterministic</td>
+<td>Elapsed milliseconds; suggested direction; score</td>
+</tr>
+<tr>
+<td>Benchmark suite</td>
+<td>Data interpretation</td>
+<td>Timed measurement wrapper</td>
+<td>Depends on generated puzzle and machine load</td>
+<td>Four paired time-and-statistic cards; running minimum</td>
+</tr>
+<tr class="alt">
+<td>Player profile</td>
+<td>Data interpretation</td>
+<td>Aggregation over runs</td>
+<td>Cumulative</td>
+<td>Solved count; best 2048 score; fastest solver time</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 7.1: Module, aptitude area, algorithm and reported metric matrix.</p>
+<h2>Problem-Solving Matrix: Sudoku Deduction Steps</h2>
+<p>The matrix below expands one pass of the Sudoku solver into the steps a player is expected to write. Row masks, column masks and box masks are shown as digit sets; the candidate set is the complement of their union within 1 to 9.</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:9.64%">
+<col style="width:18.07%">
+<col style="width:18.07%">
+<col style="width:18.07%">
+<col style="width:15.66%">
+<col style="width:20.48%">
+</colgroup>
+<thead><tr>
+<th>Step</th>
+<th>Cell (r, c)</th>
+<th>R(r) ∪ C(c) ∪ B(b)</th>
+<th>Cand(r, c)</th>
+<th>popcount</th>
+<th>Engine action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(3, 5)</td>
+<td>{1, 2, 4, 5, 7, 8, 9}</td>
+<td>{3, 6}</td>
+<td>2</td>
+<td>Branch: try 3, then 6</td>
+</tr>
+<tr class="alt">
+<td>2</td>
+<td>(1, 9)</td>
+<td>{1, 2, 3, 4, 6, 7, 8}</td>
+<td>{5, 9}</td>
+<td>2</td>
+<td>Deferred — not the minimum</td>
+</tr>
+<tr>
+<td>3</td>
+<td>(6, 3)</td>
+<td>{1, 2, 3, 4, 5, 6, 7, 8}</td>
+<td>{9}</td>
+<td>1</td>
+<td>Naked single: commit 9 without branching</td>
+</tr>
+<tr class="alt">
+<td>4</td>
+<td>(7, 2)</td>
+<td>{2, 3, 4, 6, 7, 8, 9}</td>
+<td>{1, 5}</td>
+<td>2</td>
+<td>Recompute after step 3, then branch</td>
+</tr>
+<tr>
+<td>—</td>
+<td>any cell</td>
+<td>all nine digits</td>
+<td>∅</td>
+<td>0</td>
+<td>Fail immediately: backtrack to the last branch</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 7.2: Step-by-step Sudoku deduction matrix (illustrative pass over four cells of one puzzle).</p>
+<p>Two properties of this matrix carry over directly to hand solving. First, the engine always picks the row with the smallest popcount, so it works on the most constrained cell first, exactly as the standard advice tells a player to do. Second, a popcount of zero ends the branch at once, which is why an invalid placement is refused by the interface rather than left on the board to be discovered later.</p>
+<h2>Problem-Solving Matrix: Connect Four Window Evaluation</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:20.48%">
+<col style="width:14.46%">
+<col style="width:14.46%">
+<col style="width:15.66%">
+<col style="width:34.94%">
+</colgroup>
+<thead><tr>
+<th>Window contents (a = AI, h = human)</th>
+<th>a</th>
+<th>h</th>
+<th>Contribution</th>
+<th>Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AI, AI, AI, empty</td>
+<td>3</td>
+<td>0</td>
+<td>+90</td>
+<td>One move from a win; the opponent must answer it</td>
+</tr>
+<tr class="alt">
+<td>AI, AI, empty, empty</td>
+<td>2</td>
+<td>0</td>
+<td>+15</td>
+<td>Developing line, worth a quiet building move</td>
+</tr>
+<tr>
+<td>AI, empty, empty, empty</td>
+<td>1</td>
+<td>0</td>
+<td>+2</td>
+<td>Potential only; negligible against larger terms</td>
+</tr>
+<tr class="alt">
+<td>Human, human, human, empty</td>
+<td>0</td>
+<td>3</td>
+<td>−110</td>
+<td>Losing threat; largest magnitude in the table</td>
+</tr>
+<tr>
+<td>Human, human, empty, empty</td>
+<td>0</td>
+<td>2</td>
+<td>−18</td>
+<td>Watch the line; second-order concern</td>
+</tr>
+<tr class="alt">
+<td>Human, empty, empty, empty</td>
+<td>0</td>
+<td>1</td>
+<td>−2</td>
+<td>Symmetric with the single AI disc</td>
+</tr>
+<tr>
+<td>Mixed window, both colours present</td>
+<td>1–3</td>
+<td>1–3</td>
+<td>0</td>
+<td>Dead window: neither side can complete it</td>
+</tr>
+<tr class="alt">
+<td>Empty, empty, empty, empty</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>No information</td>
+</tr>
+<tr>
+<td>Net effect of a 3-AI window and a 3-human window</td>
+<td>3</td>
+<td>3</td>
+<td>−20</td>
+<td>The agent blocks rather than extends</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 7.3: Window evaluation matrix — contribution of one length-4 window under the browser weights.</p>
+<p>Summed over all 69 windows, plus five points for each AI disc in the centre column, this table produces the leaf value that the search compares. The last row is the one to read as an aptitude answer: because the defensive magnitude exceeds the offensive one, the evaluation prefers removing the opponent's threat, and the observed search behaves accordingly.</p>
+<h2>Problem-Solving Matrix: N-Queens Counting</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:9.64%">
+<col style="width:21.69%">
+<col style="width:20.48%">
+<col style="width:19.28%">
+<col style="width:28.92%">
+</colgroup>
+<thead><tr>
+<th>n</th>
+<th>Naive C(n², n) placements</th>
+<th>Row-wise nⁿ</th>
+<th>Valid solutions</th>
+<th>Reduction from row-wise search</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>1,820</td>
+<td>256</td>
+<td>2</td>
+<td>128 of 256 row-wise arrangements rejected</td>
+</tr>
+<tr class="alt">
+<td>5</td>
+<td>—</td>
+<td>3,125</td>
+<td>10</td>
+<td>Only a small fraction survives column and diagonal pruning</td>
+</tr>
+<tr>
+<td>6</td>
+<td>—</td>
+<td>46,656</td>
+<td>4</td>
+<td>Heaviest pruning relative to the row-wise space</td>
+</tr>
+<tr class="alt">
+<td>8</td>
+<td>4,426,165,368</td>
+<td>16,777,216</td>
+<td>92</td>
+<td>Solutions are 0.00055% of the row-wise space</td>
+</tr>
+<tr>
+<td>14</td>
+<td>≈ 4.6 × 10¹⁷</td>
+<td>≈ 1.1 × 10¹⁶</td>
+<td>365,596</td>
+<td>Maximum size the 32-bit mask representation supports</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 7.4: N-Queens counting matrix for the sizes the tests and the interface use.</p>
+<p>The counts for n = 4, 8 and 14 are the values asserted by the automated test suite, so the matrix is a check on the implementation as well as a piece of practice data. The instructive comparison is between the second and fifth columns: the number of arrangements that actually satisfy every constraint is a tiny fraction of the placement space, which is what makes the row-by-row masked search fast enough to run inside a browser.</p>
+<h2>Problem-Solving Matrix: 2048 Merge and Score Arithmetic</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:19.28%">
+<col style="width:19.28%">
+<col style="width:15.66%">
+<col style="width:15.66%">
+<col style="width:30.12%">
+</colgroup>
+<thead><tr>
+<th>Row before slide (left)</th>
+<th>Row after slide</th>
+<th>Merges performed</th>
+<th>Score gained</th>
+<th>Rule illustrated</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>2, 2, 2, 2</td>
+<td>4, 4, 0, 0</td>
+<td>2</td>
+<td>8</td>
+<td>Each tile merges once only; the two 4s do not merge again</td>
+</tr>
+<tr class="alt">
+<td>4, 4, 2, 2</td>
+<td>8, 4, 0, 0</td>
+<td>2</td>
+<td>12</td>
+<td>Merges resolve in travel order, left to right</td>
+</tr>
+<tr>
+<td>2, 0, 2, 0</td>
+<td>4, 0, 0, 0</td>
+<td>1</td>
+<td>4</td>
+<td>Gaps are closed before the merge test</td>
+</tr>
+<tr class="alt">
+<td>2, 4, 8, 16</td>
+<td>2, 4, 8, 16</td>
+<td>0</td>
+<td>0</td>
+<td>No equal neighbours and no gaps: the move is illegal</td>
+</tr>
+<tr>
+<td>8, 8, 8, 0</td>
+<td>16, 8, 0, 0</td>
+<td>1</td>
+<td>16</td>
+<td>The third tile cannot merge into the newly formed 16</td>
+</tr>
+<tr class="alt">
+<td>Level k that creates tile 2ᵏ</td>
+<td>2048 / 2ᵏ merges</td>
+<td>—</td>
+<td>2,048 per level</td>
+<td>Ten levels from 4 to 2048 give 20,480 minimum score</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 7.5: Merge and score arithmetic matrix for a single slide.</p>
+<h2>Observed Measurement Matrix</h2>
+<p>The following matrix records the values actually produced by the two builds during the runs captured in Figures 6.6 and 6.7. It is the data the benchmark module is designed to present, and it is the only performance information this report claims.</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:18.07%">
+<col style="width:20.48%">
+<col style="width:19.28%">
+<col style="width:19.28%">
+<col style="width:22.89%">
+</colgroup>
+<thead><tr>
+<th>Task</th>
+<th>Browser build</th>
+<th>Console build</th>
+<th>Secondary statistic</th>
+<th>Reading of the pair</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Sudoku solve (42 removals)</td>
+<td>0.10 ms</td>
+<td>1 µs</td>
+<td>one complete 9 × 9 solution</td>
+<td>Cheapest task: MRV keeps the branch factor near 1</td>
+</tr>
+<tr class="alt">
+<td>Connect Four move (depth 5 / 6)</td>
+<td>12.20 ms</td>
+<td>10,002 µs</td>
+<td>1,688 nodes, 496 cut-offs (browser); 24,838 nodes, 6,654 cut-offs (console)</td>
+<td>Most expensive task: full-width search with partial pruning</td>
+</tr>
+<tr>
+<td>N-Queens enumeration</td>
+<td>0.40 ms</td>
+<td>≈ 0 ms</td>
+<td>92 valid arrangements at n = 8</td>
+<td>Bitwise masks make a wide but shallow enumeration cheap</td>
+</tr>
+<tr class="alt">
+<td>2048 best-move scan</td>
+<td>0.20 ms</td>
+<td>329 µs</td>
+<td>suggested direction LEFT</td>
+<td>Four board copies and four heuristic evaluations only</td>
+</tr>
+<tr>
+<td>Suite total (four tasks)</td>
+<td>about 12.9 ms</td>
+<td>about 10.4 ms</td>
+<td>four profile updates</td>
+<td>Connect Four dominates the total by an order of magnitude</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 7.6: Observed benchmark readings from one run of each build on the development machine.</p>
+<p>Two interpretation points follow. First, the browser and console numbers are not directly comparable: the console build times a deeper search, writes colour-coded text inside the timed region for two tasks, and reports a different unit. Second, the ratio between the cheapest and the most expensive card is the useful observation, and it is stable in kind even when the absolute values move with machine load.</p>
+<h2>Visual Summary Image Table</h2>
+<p>The visual summary below places the captured screens and the console output in a bordered layout beside the measurement each one evidences, so that a figure can be read without turning back to Section 6.</p>
+<table style="width:448pt;table-layout:fixed"><colgroup>
+<col style="width:50%">
+<col style="width:50%">
+</colgroup><tbody>
+<tr>
+<td><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-sudoku.png" style="width:184pt"><p class="lab">Sudoku at Medium, 38 clues, with solver-assisted entries in green</p><p class="note">Evidence for Table 7.2 and the 0.10 ms solve in Table 7.6.</p></td>
+<td><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-connect.png" style="width:184pt"><p class="lab">Connect Four mid-game, AI activity panel showing 4,539 nodes and 815 cut-offs</p><p class="note">Evidence for Table 7.3 and the node counts in Table 7.6.</p></td>
+</tr>
+<tr>
+<td><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-queens.png" style="width:184pt"><p class="lab">N-Queens 8 × 8 solved with the count of 92 arrangements</p><p class="note">Evidence for Table 7.4; the count matches the automated assertion.</p></td>
+<td><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-2048.png" style="width:184pt"><p class="lab">2048 after fifteen slides, score 68, helper suggesting a direction</p><p class="note">Evidence for Table 7.5 merge arithmetic and the heuristic weights in Table 5.5.</p></td>
+</tr>
+<tr>
+<td><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-benchmarks.png" style="width:184pt"><p class="lab">Benchmark dashboard with all four cards populated</p><p class="note">Source of the browser column of Table 7.6.</p></td>
+<td><img src="file:///C:/Users/nk121/Desktop/aptitudeproject/report_assets/shots/shot-console.png" style="width:184pt"><p class="lab">C++17 console benchmark suite run</p><p class="note">Source of the console column of Table 7.6.</p></td>
+</tr>
+</tbody></table>
+<p>Table 7.7: Visual summary image table — each screen paired with the measurement it evidences.</p>
+<h1>8. LOCAL DATA DESIGN AND DATA MANAGEMENT</h1>
+<h2>Data Overview</h2>
+<p>MindGrid has no database. Two kinds of data exist. The first is content: the Sudoku puzzle, the Connect Four position, the queen placements and the 2048 board, all of which are generated in memory at run time and are lost when the page closes unless the player continues playing. The second is the profile summary, which is deliberately small: three numbers in the browser and three fields in the console file. Nothing else is stored, and nothing is transmitted.</p>
+<h2>Storage Keys and Fields</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:21.69%">
+<col style="width:20.48%">
+<col style="width:26.51%">
+<col style="width:31.33%">
+</colgroup>
+<thead><tr>
+<th>Store</th>
+<th>Key or file</th>
+<th>Fields</th>
+<th>Written when</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Browser</td>
+<td>mindgrid-profile-v1 (localStorage)</td>
+<td>solved — count of completed puzzles and solver runs</td>
+<td>a puzzle is completed, a solver succeeds, or a benchmark run finishes</td>
+</tr>
+<tr class="alt">
+<td>Browser</td>
+<td>mindgrid-profile-v1</td>
+<td>high2048 — best 2048 score seen</td>
+<td>after every slide that raises the score</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>mindgrid-profile-v1</td>
+<td>fastestMs — smallest timed solver run</td>
+<td>after every timeSolver() call, as a running minimum</td>
+</tr>
+<tr class="alt">
+<td>Console</td>
+<td>profile.txt (three whitespace-separated values)</td>
+<td>gamesSolved — count of timed solver invocations</td>
+<td>inside recordSolve(), which saves immediately</td>
+</tr>
+<tr>
+<td>Console</td>
+<td>profile.txt</td>
+<td>highScore2048 — best 2048 score seen</td>
+<td>on leaving the 2048 menu path, via recordScore()</td>
+</tr>
+<tr class="alt">
+<td>Console</td>
+<td>profile.txt</td>
+<td>fastestSolverUs — fastest run in microseconds, −1 when unset</td>
+<td>inside recordSolve(); also written on exit</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 8.1: Persistence keys, fields and write triggers.</p>
+<p>The console file format is intentionally plain: the shipped profile contains the defaults 0 0 -1, which is what the loader expects when no file exists, and the loader leaves those defaults untouched rather than reporting an error. The browser reader is equally defensive: a value that cannot be parsed as JSON is discarded and replaced by the defaults, so a corrupted entry never prevents the arcade from opening.</p>
+<h2>Data Not Persisted</h2>
+<ul>
+<li>• In-progress boards: a half-finished Sudoku grid, a Connect Four position and a 2048 board are not saved between sessions.</li>
+<li>• Undo history: snapshots live only in memory and are cleared by a reset.</li>
+<li>• Benchmark results: the four cards are held in an in-memory array and are not written to storage; only the fastest single time survives.</li>
+<li>• Generated puzzles: a puzzle cannot be exported, imported or shared, because no serialisation of a board exists.</li>
+<li>• Solve counts by module: the profile aggregates all solves into one number and does not record which module produced them.</li>
+</ul>
+<h2>Privacy</h2>
+<p>No personal information is collected. The profile stores three numbers and no name, no identifier and no free text. Data stays inside the browser profile on the device and is removed when the user clears site data; the console profile is an ordinary file in the program's working directory that the user can inspect, edit or delete. Because both builds make no network request, there is no transmission of any local value.</p>
+<h2>Offline Behaviour</h2>
+<p>Every feature of both builds works without a network. The browser build loads three local files and needs no service, no content delivery network and no remote data; the console build needs only the compiled executable. This is a consequence of the local-first design rather than an added mode, and it means the practice tool is usable in the environments where it is most needed, including machines with no internet access.</p>
+<h1>9. SIDE-BY-SIDE COMPARISON TABLES</h1>
+<h2>Feature Comparison</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:20.48%">
+<col style="width:26.51%">
+<col style="width:26.51%">
+<col style="width:26.51%">
+</colgroup>
+<thead><tr>
+<th>Feature</th>
+<th>Printed aptitude material</th>
+<th>Generic puzzle app</th>
+<th>MindGrid</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Interaction</td>
+<td>Answer key only</td>
+<td>Play only</td>
+<td>Play, hint, solve and count in one screen</td>
+</tr>
+<tr class="alt">
+<td>Reasoning shown</td>
+<td>Final answer, no path</td>
+<td>Rarely</td>
+<td>Candidate logic, node counts, cut-offs and arrangement counts exposed</td>
+</tr>
+<tr>
+<td>Measurement</td>
+<td>None</td>
+<td>Score only</td>
+<td>Elapsed time per solver plus a running minimum</td>
+</tr>
+<tr class="alt">
+<td>Puzzle validity</td>
+<td>Editorial</td>
+<td>Not guaranteed</td>
+<td>Unique solution verified by a capped second search</td>
+</tr>
+<tr>
+<td>Setup</td>
+<td>None</td>
+<td>Install from a store</td>
+<td>Open one HTML file, or compile one source file</td>
+</tr>
+<tr class="alt">
+<td>Server dependency</td>
+<td>None</td>
+<td>Usually required</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Offline use</td>
+<td>Yes</td>
+<td>Often limited</td>
+<td>Complete for every feature</td>
+</tr>
+<tr class="alt">
+<td>Progress record</td>
+<td>Manual</td>
+<td>Account based</td>
+<td>Local profile with three fields, no account</td>
+</tr>
+<tr>
+<td>Range of techniques</td>
+<td>Not applicable</td>
+<td>Usually one game type</td>
+<td>Four distinct algorithm classes in one interface</td>
+</tr>
+<tr class="alt">
+<td>Cost</td>
+<td>Purchase</td>
+<td>Free or paid</td>
+<td>Source code, no licence or service</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 9.1: Feature comparison against the two alternatives a learner would otherwise use.</p>
+<h2>Browser Build versus Console Build</h2>
+<p>The two implementations share the four problem definitions and the four algorithms, but they were written independently and differ where an interface or a measurement approach differs. The table below states those differences exactly, because they are the reason the same task can produce different numbers in the two builds.</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:21.69%">
+<col style="width:39.76%">
+<col style="width:38.55%">
+</colgroup>
+<thead><tr>
+<th>Aspect</th>
+<th>Browser build (web/app.js)</th>
+<th>Console build (main.cpp)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Interface</td>
+<td>CSS grid boards, navigation rail, toasts, modal help</td>
+<td>ASCII framed boards with ANSI colour</td>
+</tr>
+<tr class="alt">
+<td>Sudoku difficulties</td>
+<td>Easy 35, Medium 43, Hard 50 removals</td>
+<td>Easy 35 and Hard 50 removals only</td>
+</tr>
+<tr>
+<td>Sudoku undo</td>
+<td>Whole-board snapshots</td>
+<td>Per-move (row, column, previous value) records</td>
+</tr>
+<tr class="alt">
+<td>Connect Four depth</td>
+<td>5 plies below the root move</td>
+<td>6 plies below the root move, reported as a depth-7 move</td>
+</tr>
+<tr>
+<td>Centre column weight</td>
+<td>+5 per AI disc</td>
+<td>+4 per AI disc</td>
+</tr>
+<tr class="alt">
+<td>Threat and defence weights</td>
+<td>+90 / +15 / +2 against −110 / −18 / −2</td>
+<td>+80 / +12 / +2 against −100 / −14 / −2</td>
+</tr>
+<tr>
+<td>N-Queens sizes</td>
+<td>Selector from 4 to 14</td>
+<td>Prompted and validated from 4 to 14</td>
+</tr>
+<tr class="alt">
+<td>2048 spawn</td>
+<td>Math.random() &lt; 0.9 gives a 2, otherwise a 4</td>
+<td>Uniform 1–10 draw: a 1 gives a 4, otherwise a 2</td>
+</tr>
+<tr>
+<td>Timing API</td>
+<td>High-resolution monotonic clock in milliseconds</td>
+<td>std::chrono::steady_clock in microseconds, milliseconds for N-Queens</td>
+</tr>
+<tr class="alt">
+<td>Profile</td>
+<td>localStorage object with three fields</td>
+<td>profile.txt with three whitespace-separated fields</td>
+</tr>
+<tr>
+<td>Random seeding</td>
+<td>Browser entropy</td>
+<td>Engine seeded from the clock at start-up</td>
+</tr>
+<tr class="alt">
+<td>Automated tests</td>
+<td>Twelve tests executed against the real engine</td>
+<td>Compiler warnings only; behaviour checked by running the menu</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 9.2: Browser build compared with the C++17 console build.</p>
+<h2>Technology Comparison</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:21.69%">
+<col style="width:39.76%">
+<col style="width:38.55%">
+</colgroup>
+<thead><tr>
+<th>Area</th>
+<th>Implementation</th>
+<th>Role in the project</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>HTML5</td>
+<td>index.html</td>
+<td>Shell, navigation, view container, accessible labels</td>
+</tr>
+<tr class="alt">
+<td>CSS3</td>
+<td>styles.css</td>
+<td>Theme variables, grid boards, tile colours, three responsive breakpoints</td>
+</tr>
+<tr>
+<td>Plain JavaScript</td>
+<td>app.js</td>
+<td>Engines, rendering, routing, event delegation, storage, timing</td>
+</tr>
+<tr class="alt">
+<td>C++17</td>
+<td>main.cpp</td>
+<td>Independent console implementation of the same four modules</td>
+</tr>
+<tr>
+<td>std::array and std::stack</td>
+<td>main.cpp</td>
+<td>Fixed-size grids and undo history without dynamic allocation</td>
+</tr>
+<tr class="alt">
+<td>Bit masks</td>
+<td>both builds</td>
+<td>Constant-time occupancy and attack tests</td>
+</tr>
+<tr>
+<td>std::chrono</td>
+<td>main.cpp</td>
+<td>Monotonic measurement of solver runs</td>
+</tr>
+<tr class="alt">
+<td>std::mt19937 and std::shuffle</td>
+<td>main.cpp</td>
+<td>Puzzle generation, tile spawning and candidate ordering</td>
+</tr>
+<tr>
+<td>localStorage</td>
+<td>app.js</td>
+<td>Three-field profile summary on the device</td>
+</tr>
+<tr class="alt">
+<td>node:test and node:vm</td>
+<td>engines.test.cjs</td>
+<td>Executes the real browser engine inside a simulated DOM</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 9.3: Technology used and its role in the project.</p>
+<p>The comparison tables position the implemented feature set of this project. They do not rank products and they make no claim of superiority over commercial applications; the printed and generic-app columns describe the alternatives a learner would otherwise use.</p>
+<h1>10. RESEARCH / PROJECT GAP ANALYSIS</h1>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:24.1%">
+<col style="width:36.14%">
+<col style="width:39.76%">
+</colgroup>
+<thead><tr>
+<th>Observed gap or constraint</th>
+<th>Implication</th>
+<th>Potential improvement</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>No accounts and no server</td>
+<td>Progress cannot move between devices and cannot be backed up</td>
+<td>Optional authenticated sync with the local profile as the offline cache</td>
+</tr>
+<tr class="alt">
+<td>Benchmark results are not stored</td>
+<td>Only the fastest single run survives; no history to interpret</td>
+<td>A run log with environment metadata and a small trend chart</td>
+</tr>
+<tr>
+<td>Timings are device-dependent</td>
+<td>Two players cannot compare results meaningfully</td>
+<td>Report nodes per millisecond so cost is comparable across machines</td>
+</tr>
+<tr class="alt">
+<td>2048 helper is greedy one-ply</td>
+<td>It misses sequences that need a preparatory move</td>
+<td>Expectimax over chance nodes for the next spawn, with a depth limit</td>
+</tr>
+<tr>
+<td>Sudoku difficulty is a removal count</td>
+<td>Two puzzles with the same count can differ greatly in technique</td>
+<td>Rate puzzles by the solving techniques required rather than by blanks</td>
+</tr>
+<tr class="alt">
+<td>No puzzle import or export</td>
+<td>A player cannot practise a specific published puzzle</td>
+<td>Accept and validate an 81-character puzzle string</td>
+</tr>
+<tr>
+<td>Connect Four has no undo</td>
+<td>A mis-click is permanent within the match</td>
+<td>Store the move history and allow a single retraction</td>
+</tr>
+<tr class="alt">
+<td>Limited accessibility detail</td>
+<td>Board state is announced only through cell labels</td>
+<td>Live region updates, full keyboard play for all four modules, contrast control</td>
+</tr>
+<tr>
+<td>No timed or scored practice mode</td>
+<td>The aptitude value is qualitative rather than measurable</td>
+<td>Session mode with per-module attempt counts and accuracy</td>
+</tr>
+<tr class="alt">
+<td>Console colours need a VT terminal</td>
+<td>Plain terminals lose the visual grouping</td>
+<td>Detect capability and fall back to monochrome</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 10.1: Observed gaps, their consequences and the improvement each suggests.</p>
+<p>These are scope gaps in a deliberately small project, not defects in the submitted build: each one describes something the current implementation does not claim to do.</p>
+<h1>11. EXPECTED OUTCOMES AND EVALUATION CRITERIA</h1>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:20.48%">
+<col style="width:42.17%">
+<col style="width:37.35%">
+</colgroup>
+<thead><tr>
+<th>Evaluation area</th>
+<th>Expected result</th>
+<th>How verified</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Navigation</td>
+<td>Every rail entry switches the view without a page reload and updates the breadcrumb</td>
+<td>Automated test 1</td>
+</tr>
+<tr class="alt">
+<td>Sudoku validity</td>
+<td>Each generated puzzle has exactly one solution at all three difficulties</td>
+<td>Automated test 2, solution count equals 1</td>
+</tr>
+<tr>
+<td>Sudoku clue counts</td>
+<td>46, 38 and 31 clues for Easy, Medium and Hard</td>
+<td>Automated test 2, 81 minus removals</td>
+</tr>
+<tr class="alt">
+<td>Sudoku validation</td>
+<td>A conflicting digit is refused and the cell is left unchanged</td>
+<td>Automated test 4</td>
+</tr>
+<tr>
+<td>Connect Four correctness</td>
+<td>The win detector returns the four winning cells and the agent takes an immediate win</td>
+<td>Automated test 5</td>
+</tr>
+<tr class="alt">
+<td>Connect Four defence</td>
+<td>The agent blocks a three-in-a-row threat rather than extending its own line</td>
+<td>Automated test 5 and Table 7.3</td>
+</tr>
+<tr>
+<td>Connect Four turn cycle</td>
+<td>Input is locked during the AI reply and control returns to the human</td>
+<td>Automated test 6</td>
+</tr>
+<tr class="alt">
+<td>N-Queens correctness</td>
+<td>2, 92 and 365,596 solutions for n = 4, 8 and 14</td>
+<td>Automated test 7</td>
+</tr>
+<tr>
+<td>N-Queens interaction</td>
+<td>Attacked squares are refused and a complete arrangement is produced</td>
+<td>Automated test 8</td>
+</tr>
+<tr class="alt">
+<td>2048 merge rule</td>
+<td>[2,2,2,2] becomes [4,4,0,0] with a gain of 8; each tile merges once</td>
+<td>Automated test 9</td>
+</tr>
+<tr>
+<td>2048 bounds</td>
+<td>Auto-play stops at 50 moves and keeps one snapshot per move</td>
+<td>Automated test 10</td>
+</tr>
+<tr class="alt">
+<td>2048 controls</td>
+<td>Arrow and WASD slides work and undo restores the previous board exactly</td>
+<td>Automated test 11</td>
+</tr>
+<tr>
+<td>Benchmark suite</td>
+<td>A full run produces four labelled cards, each with a time and a statistic</td>
+<td>Automated test 12 and Figure 6.6</td>
+</tr>
+<tr class="alt">
+<td>Persistence</td>
+<td>Solved count and best score survive a reload</td>
+<td>Manual check against the sidebar value</td>
+</tr>
+<tr>
+<td>Responsiveness</td>
+<td>Layout adapts at 1100, 780 and 480 pixels without overflow</td>
+<td>Manual check at three widths</td>
+</tr>
+<tr class="alt">
+<td>Console build</td>
+<td>Compiles without warnings under -Wall -Wextra -pedantic and completes a suite run</td>
+<td>Observed run captured in Figure 6.7</td>
+</tr>
+<tr>
+<td>Offline operation</td>
+<td>All features work with no network connection</td>
+<td>Manual check with networking disabled</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 11.1: Evaluation criteria, expected results and how each was verified.</p>
+<h2>Assessment of Achievement</h2>
+<p>Against the objectives in Section 2, the build meets each one that is testable: four modules exist behind one shell, the rules are enforced and asserted, four different algorithmic approaches are implemented, unique-solution generation is verified at every difficulty, solver effort is reported alongside solver output, progress is stored locally in both builds, and twelve automated tests pass against the real engine code. The objective of keeping the browser build free of a framework and a build step is met in the strictest sense: three files, no dependencies, no generated artefacts.</p>
+<h1>12. LIMITATIONS AND CONCLUSION</h1>
+<h2>Limitations</h2>
+<ul>
+<li>• Local-only persistence: the profile lives in one browser or one working directory, with no synchronisation, backup or multi-user support.</li>
+<li>• Non-comparable timings: measurements depend on device, browser, compiler and system load, and the two builds use different units and different search depths.</li>
+<li>• Greedy 2048 helper: one-ply evaluation with no model of the next spawn, so the suggestion is reasonable rather than optimal.</li>
+<li>• Fixed Connect Four depth: five plies in the browser and six in the console, which is strong enough to teach lookahead but not enough to be a perfect player.</li>
+<li>• Difficulty by blank count only: Sudoku levels describe how many cells are missing, not which techniques the puzzle requires.</li>
+<li>• No puzzle import or export, no saved boards, and no benchmark history.</li>
+<li>• Console randomness is seeded from the clock, so a generated puzzle cannot be reproduced exactly from a seed.</li>
+<li>• Accessibility is partial: labels and keyboard entry exist for two modules, but there is no live announcement of board changes and no contrast control.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>MindGrid delivers, in two independent implementations, a single interface in which four classic reasoning problems can be played, solved by an algorithm, and measured. The browser build proves that an application of this scope needs no framework, no build pipeline and no server: 378 lines of JavaScript hold four engines, four rendering paths, a benchmark suite and a profile, and the same code passes twelve automated tests executed inside a simulated DOM. The console build proves the same algorithms in a second environment, with a polymorphic game interface, a monotonic-clock measurement wrapper and a plain-text profile.</p>
+<p>The aptitude value of the project lies in the pairing it makes possible. The candidate-set computation the solver performs is the same deduction a player is taught to write down; the evaluation weights in Table 5.3 let a reader predict the agent's behaviour before watching a move; the counting matrix in Table 7.4 shows how far the valid arrangements of a chess problem fall short of the naive placement space; and the merge arithmetic in Table 7.5 makes a well-known scoring identity verifiable from the rules alone. Read together with the benchmark cards, they turn four games into practice material for logical reasoning, quantitative aptitude and data interpretation.</p>
+<p>The design deliberately reports only what it can observe. It states a node count when the search visited nodes, a solution count when the enumeration counted them, and a time when a clock measured one, and it declines to present a device-dependent number as a specification. That discipline, together with the local-first architecture, makes the project a dependable base for the extensions listed in Section 10 rather than a closed demonstration.</p>
+<h2>Future Scope</h2>
+<ul>
+<li>• Store benchmark history with environment metadata and present a trend view for the data interpretation module.</li>
+<li>• Add a technique-based Sudoku rater and accept imported puzzle strings for validation.</li>
+<li>• Replace the greedy 2048 helper with a bounded expectimax search over spawn chance nodes and compare it against the current heuristic.</li>
+<li>• Add iterative deepening and a transposition table to the Connect Four search, reporting the depth actually reached.</li>
+<li>• Offer optional accounts with a secure backend for cross-device progress, keeping the local profile as the offline cache.</li>
+<li>• Extend accessibility with live board announcements, complete keyboard play for all modules and a contrast control.</li>
+<li>• Add further modules in the same style — nonograms, Kakuro or a sliding-tiles puzzle — each with its own technique and its own reported statistic.</li>
+<li>• Add a practice session mode that records attempts and accuracy per module so that progress becomes measurable.</li>
+</ul>
+<h1>13. REFERENCES AND APPENDICES</h1>
+<h2>References</h2>
+<ul>
+<li>• Project source code: main.cpp, web/app.js, web/index.html and web/styles.css (submitted with this report).</li>
+<li>• Project run instructions: web/README.md.</li>
+<li>• Automated verification: web/tests/engines.test.cjs, executed with node --test.</li>
+<li>• Russell, S. and Norvig, P., Artificial Intelligence: A Modern Approach, game-tree search and alpha-beta pruning.</li>
+<li>• Cormen, T. H., Leiserson, C. E., Rivest, R. L. and Stein, C., Introduction to Algorithms, backtracking and search complexity.</li>
+<li>• ISO/IEC 14882:2017, C++17 standard, for the language and library facilities used by main.cpp.</li>
+<li>• MDN Web Docs: HTML, CSS, JavaScript, Window.localStorage and performance.now() references.</li>
+<li>• OEIS A000170, number of solutions to the n-Queens problem, used to verify the counts in Table 7.4.</li>
+</ul>
+<h2>Appendix A — Build and Run Commands</h2>
+<pre>Browser build
+  open  web/index.html
+
+Automated engine tests
+  node --test .\web\tests\engines.test.cjs
+
+Console build
+  g++ -std=c++17 -O2 -Wall -Wextra -pedantic main.cpp -o mindgrid
+  .\mindgrid.exe
+
+Console menu used during verification
+  6  -&gt;  run the all-algorithms benchmark suite
+  0  -&gt;  return to the arcade, then exit and save the profile</pre>
+<h2>Appendix B — Console Session Transcript</h2>
+<p>The following lines are the measured output of the benchmark suite shown in Figure 6.7, reproduced as text so that the values in Table 7.6 can be checked.</p>
+<pre>M I N D G R I D  /  ALL-ALGORITHMS BENCHMARK
+Running each solver against a fresh or current puzzle
+
+Sudoku solved in 1 us.
+Connect Four depth-7 move: column 4, 24838 nodes, 6654 alpha-beta cutoffs, 10002 us.
+8-Queens: 92 solutions, first placement 1 5 8 6 3 7 2 4, 0 ms.
+2048 greedy best move: L, 329 us.</pre>
+<h2>Appendix C — Module-to-Function Index</h2>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:24.1%">
+<col style="width:38.55%">
+<col style="width:37.35%">
+</colgroup>
+<thead><tr>
+<th>Mechanism</th>
+<th>Browser build (app.js)</th>
+<th>Console build (main.cpp)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Candidate masks</td>
+<td>sudokuMasks(), candidatesOf()</td>
+<td>rowMask / colMask / boxMask, candidates()</td>
+</tr>
+<tr class="alt">
+<td>MRV backtracking solver</td>
+<td>solveSudoku()</td>
+<td>SudokuGame::solve()</td>
+</tr>
+<tr>
+<td>Unique-puzzle generation</td>
+<td>makeSudokuPuzzle()</td>
+<td>SudokuGame::generate(), solutionCount()</td>
+</tr>
+<tr class="alt">
+<td>Board evaluation</td>
+<td>connectEval()</td>
+<td>ConnectFourAI::evaluate()</td>
+</tr>
+<tr>
+<td>Pruned search</td>
+<td>connectMinimax(), connectBestMove()</td>
+<td>ConnectFourAI::minimax(), bestMove()</td>
+</tr>
+<tr class="alt">
+<td>Bitwise enumeration</td>
+<td>queenSearch()</td>
+<td>NQueensTour::search()</td>
+</tr>
+<tr>
+<td>Slide and merge</td>
+<td>apply2048(), slide2048()</td>
+<td>Game2048::move()</td>
+</tr>
+<tr class="alt">
+<td>Heuristic move choice</td>
+<td>heuristic2048(), best2048()</td>
+<td>Game2048::heuristic(), bestDirection()</td>
+</tr>
+<tr>
+<td>Timing wrapper</td>
+<td>timeSolver()</td>
+<td>Utils::benchmarkUs()</td>
+</tr>
+<tr class="alt">
+<td>Profile read / write</td>
+<td>safeRead(), saveProfile()</td>
+<td>PlayerProfile::load(), save()</td>
+</tr>
+<tr>
+<td>Routing</td>
+<td>route(), setActive()</td>
+<td>main() menu loop</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 13.1: Where each mechanism lives in the source.</p>
+<h1>14. GITHUB PROOF</h1>
+<p>The complete source of both builds, the test suite and the run instructions are published in the project repository. The record below is to be completed by the student at submission time: paste the repository address, then attach a screenshot of the repository root showing the committed files.</p>
+<table style="width:471pt;table-layout:fixed"><colgroup>
+<col style="width:27.71%">
+<col style="width:72.29%">
+</colgroup>
+<thead><tr>
+<th>Item</th>
+<th>Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Repository URL</td>
+<td>https://github.com/____________________________ (to be inserted)</td>
+</tr>
+<tr class="alt">
+<td>Branch submitted</td>
+<td>main / ____________________</td>
+</tr>
+<tr>
+<td>Commit reference</td>
+<td>____________________</td>
+</tr>
+<tr class="alt">
+<td>Upload date</td>
+<td>____ / ____ / 2026</td>
+</tr>
+<tr>
+<td>Files expected at root</td>
+<td>main.cpp, web/, profile.txt, web/README.md, web/tests/</td>
+</tr>
+</tbody></table>
+<p class="caption">Table 14.1: Repository record.</p>
+<div style="min-height:176pt">Insert a screenshot of the repository root here, showing main.cpp, the web directory and the last commit date.</div>
+<div style="height:10pt"></div>
+<p>Note: the repository must contain exactly the code described in this report. The two builds, the twelve tests and the run commands in Appendix A are the artefacts that the evaluation will check against Sections 3, 5 and 11.</p>
+<p style="font-size:11pt">--- End of Report ---</p>
+</body></html>

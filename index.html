@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111914">
+  <title>MindGrid — Puzzle Arcade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="MindGrid home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="brand-name">mind<span>grid</span><small>PUZZLE ARCADE</small></span>
+      </a>
+
+      <div class="nav-label">PLAY</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-screen="home"><span class="nav-icon">⌂</span>Overview</button>
+        <button class="nav-item" data-screen="sudoku"><span class="nav-icon">▦</span>Sudoku <span class="nav-tag">01</span></button>
+        <button class="nav-item" data-screen="connect"><span class="nav-icon">◉</span>Connect Four <span class="nav-tag">02</span></button>
+        <button class="nav-item" data-screen="queens"><span class="nav-icon">♛</span>N-Queens <span class="nav-tag">03</span></button>
+        <button class="nav-item" data-screen="2048"><span class="nav-icon">▧</span>2048 <span class="nav-tag">04</span></button>
+      </nav>
+
+      <div class="nav-label tools-label">TOOLS</div>
+      <nav class="main-nav" aria-label="Tools">
+        <button class="nav-item" data-screen="benchmarks"><span class="nav-icon">⌁</span>Benchmarks</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="profile-mini">
+          <div class="avatar">M</div>
+          <div><strong>MindGrid player</strong><span id="sidebar-solved">0 puzzles solved</span></div>
+          <span class="online-dot"></span>
+        </div>
+        <div class="version-note">BUILT FOR CURIOUS MINDS <span>v1.0</span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>ARCADE</span><b>/</b><strong id="crumb-current">OVERVIEW</strong></div>
+        <div class="topbar-right">
+          <span class="status-pill"><i></i> All systems ready</span>
+          <button class="icon-button" id="help-button" title="How to play" aria-label="How to play">?</button>
+        </div>
+      </header>
+      <section id="view" class="view" aria-live="polite"></section>
+      <footer class="page-footer"><span>MindGrid Arcade</span><span>Think clearly. Play boldly.</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <script src="app.js"></script>
+</body>
+</html>

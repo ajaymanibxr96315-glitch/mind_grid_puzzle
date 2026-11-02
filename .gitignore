@@ -1,0 +1,61 @@
+# ============================================================
+# MindGrid Puzzle — .gitignore
+# Excludes Zig compiler stdlib internals & build artifacts
+# ============================================================
+
+# ---- Zig stdlib/compiler extracted sources (NOT your code) -
+*.h
+*.c
+*.zig
+*.S
+*.s
+*.def
+*.inc
+*.ipp
+*.x
+*.in
+*.tbd
+
+# ---- Compiled / Binary output -----------------------------
+*.exe
+*.obj
+*.lib
+*.pdb
+*.ilk
+*.dll
+*.so
+*.a
+*.out
+*.der
+
+# ---- Zig build cache & artifacts -------------------------
+zig-out/
+zig-cache/
+.zig-cache/
+
+# ---- Build output ----------------------------------------
+build/
+dist/
+out/
+
+# ---- Logs & temp -----------------------------------------
+*.log
+profile.txt
+console-run.txt
+docx-pages.txt
+toc-pages*.json
+content-part*.json
+
+# ---- OS junk ---------------------------------------------
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ---- Editor / IDE ----------------------------------------
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- PDF (usually generated) ----------------------------
+*.pdf
